@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `php_mvc`
 --
-CREATE DATABASE IF NOT EXISTS `php_mvc` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `php_mvc` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
 USE `php_mvc`;
 
 -- --------------------------------------------------------
