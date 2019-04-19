@@ -79,27 +79,31 @@ $req->execute();
     
     public static function add() {
     $db = Db::getInstance();
-    $req = $db->prepare("Insert into article(article_id, blogger_id, comment_id, headline, text) values (:article_id, :blogger_id, :comment_id, :headline, :text)");
-    $req->bindParam(':article_id', $article_id);
-    $req->bindParam(':blogger_id', $blogger_id);
-    $req->bindParam(':comment_id', $comment_id);
+    $req = $db->prepare("Insert into article(headline, text) values (:headline, :text)");
+    //$req->bindParam(':article_id', $article_id);
+    //$req->bindParam(':blogger_id', $blogger_id);
+   //$req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
     $req->bindParam(':text', $text);
     
     //JYOTI CHANGE THIS CODE
 // set parameters and execute
-    if(isset($_POST['name'])&& $_POST['name']!=""){
-        $filteredName = filter_input(INPUT_POST,'name', FILTER_SANITIZE_SPECIAL_CHARS);
+//    if(isset($_POST['article_id'])&& $_POST['article_id']!=""){
+//        $filteredArticleID = filter_input(INPUT_POST,'article_id', FILTER_SANITIZE_SPECIAL_CHARS);
+ //   }
+    if(isset($_POST['headline'])&& $_POST['headline']!=""){
+        $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-    if(isset($_POST['price'])&& $_POST['price']!=""){
-        $filteredPrice = filter_input(INPUT_POST,'price', FILTER_SANITIZE_SPECIAL_CHARS);
+    if(isset($_POST['text'])&& $_POST['text']!=""){
+        $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-$name = $filteredName;
-$price = $filteredPrice;
+//$article_id = $filteredArticleID;
+$headline = $filteredHeadline;
+$text = $filteredText;
 $req->execute();
 
 //upload product image
-Product::uploadFile($name);
+//Article::uploadFile($name);
     }
 
 const AllowedTypes = ['image/jpeg', 'image/jpg'. 'image/png'];
@@ -107,36 +111,36 @@ const InputKey = 'myUploader';
 
 //die() function calls replaced with trigger_error() calls
 //replace with structured exception handling
-public static function uploadFile(string $name) {
-
-	if (empty($_FILES[self::InputKey])) {
-		//die("File Missing!");
-                trigger_error("File Missing!");
-	}
-
-	if ($_FILES[self::InputKey]['error'] > 0) {
-		trigger_error("Handle the error! " . $_FILES[InputKey]['error']);
-	}
-
-
-	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
-		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
-	}
-
-	$tempFile = $_FILES[self::InputKey]['tmp_name'];
-//        $path = "C:/xampp/htdocs/MVC_Skeleton/views/images/";
-        $path = "C:/xampp/htdocs/Blog-Project/Blog-Project-Jyoti/views/images/";
-	$destinationFile = $path . $name . '.jpeg';
-
-	if (!move_uploaded_file($tempFile, $destinationFile)) {
-		trigger_error("Handle Error");
-	}
-		
-	//Clean up the temp file
-	if (file_exists($tempFile)) {
-		unlink($tempFile); 
-	}
-}
+//public static function uploadFile(string $name) {
+//
+//	if (empty($_FILES[self::InputKey])) {
+//		//die("File Missing!");
+//                trigger_error("File Missing!");
+//	}
+//
+//	if ($_FILES[self::InputKey]['error'] > 0) {
+//		trigger_error("Handle the error! " . $_FILES[InputKey]['error']);
+//	}
+//
+//
+//	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
+//		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
+//	}
+//
+//	$tempFile = $_FILES[self::InputKey]['tmp_name'];
+////        $path = "C:/xampp/htdocs/MVC_Skeleton/views/images/";
+//        $path = "C:/xampp/htdocs/Blog-Project/Blog-Project-Jyoti/views/images/";
+//	$destinationFile = $path . $name . '.jpeg';
+//
+//	if (!move_uploaded_file($tempFile, $destinationFile)) {
+//		trigger_error("Handle Error");
+//	}
+//		
+//	//Clean up the temp file
+//	if (file_exists($tempFile)) {
+//		unlink($tempFile); 
+//	}
+//}
 public static function remove($article_id) {
       $db = Db::getInstance();
       //make sure $article_id is an integer
