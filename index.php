@@ -15,8 +15,9 @@
         $controller = 'pages';
         $action     = 'home';
   }
-
+//gabby
     require_once('views/layout.php');
         ?>
     </body>
 </html>
+/
