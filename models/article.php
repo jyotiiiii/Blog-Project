@@ -1,38 +1,42 @@
 <?php
-  class Product {
+  class Article {
 
     // we define 3 attributes
-    public $id;
-    public $name;
-    public $price;
+    public $article_id;
+    public $blogger_id;
+    public $comment_id;
+    public $headline;
+    public $text;
 
-    public function __construct($id, $name, $price) {
-      $this->id    = $id;
-      $this->name  = $name;
-      $this->price = $price;
+    public function __construct($article_id, $blogger_id, $comment_id, $headline, $text) {
+      $this->article_id    = $article_id;
+      $this->blogger_id  = $blogger_id;
+      $this->comment_id = $comment_id;
+      $this->headline = $headline;
+      $this->text = $text;
     }
 
     public static function all() {
       $list = [];
       $db = Db::getInstance();
-      $req = $db->query('SELECT * FROM product');
+      $req = $db->query('SELECT * FROM article');
       // we create a list of Product objects from the database results
-      foreach($req->fetchAll() as $product) {
-        $list[] = new Product($product['id'], $product['name'], $product['price']);
+      foreach($req->fetchAll() as $article) {
+        $list[] = new Article($article['article_id'], $article['blogger_id'], $article['comment_id'], $article['headline'], $article['text']);
       }
       return $list;
     }
 
-    public static function find($id) {
+    public static function find($article_id) {
       $db = Db::getInstance();
-      //use intval to make sure $id is an integer
-      $id = intval($id);
-      $req = $db->prepare('SELECT * FROM product WHERE id = :id');
-      //the query was prepared, now replace :id with the actual $id value
-      $req->execute(array('id' => $id));
-      $product = $req->fetch();
-if($product){
-      return new Product($product['id'], $product['name'], $product['price']);
+      //use intval to make sure $article_id is an integer
+      $article_id = intval($article_id);
+      $req = $db->prepare('SELECT * FROM article WHERE article_id = :article_id');
+      //the query was prepared, now replace :article_id with the actual $article_id value
+      $req->execute(array('article_id' => $article_id));
+      $article = $req->fetch();
+if($article){
+      return new Article($article['article_id'], $article['blogger_id'], $article['comment_id'], $article['headline'], $article['text']);
     }
     else
     {
@@ -41,14 +45,17 @@ if($product){
     }
     }
 
-public static function update($id) {
+public static function update($article_id) {
     $db = Db::getInstance();
-    $req = $db->prepare("Update product set name=:name, price=:price where id=:id");
-    $req->bindParam(':id', $id);
-    $req->bindParam(':name', $name);
-    $req->bindParam(':price', $price);
-
+    $req = $db->prepare("Update article set blogger_id=:blogger_id, comment_id=:comment_id, headline=:headline, text=:text where article_id=:article_id");
+    $req->bindParam(':article_id', $article_id);
+    $req->bindParam(':blogger_id', $blogger_id);
+    $req->bindParam(':comment_id', $comment_id);
+    $req->bindParam(':headline', $headline);
+    $req->bindParam(':text', $text);
 // set name and price parameters and execute
+    
+//    JYOTI CHANGE THIS CODE
     if(isset($_POST['name'])&& $_POST['name']!=""){
         $filteredName = filter_input(INPUT_POST,'name', FILTER_SANITIZE_SPECIAL_CHARS);
     }
@@ -68,10 +75,14 @@ $req->execute();
     
     public static function add() {
     $db = Db::getInstance();
-    $req = $db->prepare("Insert into product(name, price) values (:name, :price)");
-    $req->bindParam(':name', $name);
-    $req->bindParam(':price', $price);
-
+    $req = $db->prepare("Insert into article(article_id, blogger_id, comment_id, headline, text) values (:article_id, :blogger_id, :comment_id, :headline, :text)");
+    $req->bindParam(':article_id', $article_id);
+    $req->bindParam(':blogger_id', $blogger_id);
+    $req->bindParam(':comment_id', $comment_id);
+    $req->bindParam(':headline', $headline);
+    $req->bindParam(':text', $text);
+    
+    //JYOTI CHANGE THIS CODE
 // set parameters and execute
     if(isset($_POST['name'])&& $_POST['name']!=""){
         $filteredName = filter_input(INPUT_POST,'name', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -87,7 +98,7 @@ $req->execute();
 Product::uploadFile($name);
     }
 
-const AllowedTypes = ['image/jpeg', 'image/jpg'];
+const AllowedTypes = ['image/jpeg', 'image/jpg'. 'image/png'];
 const InputKey = 'myUploader';
 
 //die() function calls replaced with trigger_error() calls
@@ -122,13 +133,13 @@ public static function uploadFile(string $name) {
 		unlink($tempFile); 
 	}
 }
-public static function remove($id) {
+public static function remove($article_id) {
       $db = Db::getInstance();
-      //make sure $id is an integer
-      $id = intval($id);
-      $req = $db->prepare('delete FROM product WHERE id = :id');
-      // the query was prepared, now replace :id with the actual $id value
-      $req->execute(array('id' => $id));
+      //make sure $article_id is an integer
+      $article_id = intval($article_id);
+      $req = $db->prepare('delete FROM product WHERE article_id = :article_id');
+      // the query was prepared, now replace :article_id with the actual $article_id value
+      $req->execute(array('article_id' => $article_id));
   }
   
 }

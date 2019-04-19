@@ -1,4 +1,5 @@
 <?php
+//function call can be used on different objects
   function call($controller, $action) {
     // require the file that matches the controller name
     require_once('controllers/' . $controller . '_controller.php');
@@ -25,6 +26,7 @@
 // for validation we list the allowed controllers and their actions
 // Add an entry for each new controller and its actions
 $controllers = array('pages' => ['home', 'error'],
+                    'article' => ['readAll','read','create','update','delete'],
                     'product' => ['readAll','read','create','update','delete'],
                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
                     );
