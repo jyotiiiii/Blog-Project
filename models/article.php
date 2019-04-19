@@ -56,14 +56,18 @@ public static function update($article_id) {
 // set name and price parameters and execute
     
 //    JYOTI CHANGE THIS CODE
-    if(isset($_POST['name'])&& $_POST['name']!=""){
-        $filteredName = filter_input(INPUT_POST,'name', FILTER_SANITIZE_SPECIAL_CHARS);
+    if(isset($_POST['article_id'])&& $_POST['article_id']!=""){
+        $filteredArticleID = filter_input(INPUT_POST,'article_id', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-    if(isset($_POST['price'])&& $_POST['price']!=""){
-        $filteredPrice = filter_input(INPUT_POST,'price', FILTER_SANITIZE_SPECIAL_CHARS);
+    if(isset($_POST['headline'])&& $_POST['headline']!=""){
+        $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-$name = $filteredName;
-$price = $filteredPrice;
+    if(isset($_POST['text'])&& $_POST['text']!=""){
+        $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+$article_id = $filteredArticleID;
+$headline = $filteredHeadline;
+$text = $filteredText;
 $req->execute();
 
 //upload product image if it exists
