@@ -20,7 +20,7 @@
     </header>
 <div class="w3-container w3-pink">
     <?php require_once('routes.php'); ?>
-</<div>
+</div>
 <div class="w3-container w3-gray">
     <footer >
         Copyright &COPY; <?= date('Y'); ?>

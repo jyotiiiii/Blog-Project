@@ -66,13 +66,18 @@ and open the template in the editor.
 
 <div class="content">
 </div>
+
+<div>
+    <?php require_once('routes.php'); ?>
+</div>
+
     <footer id="myFooter">
         <div class="container">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Comment</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Vlog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         <p class="footer-copyright">© 2019 Copyright Honeycomb Bees Team</p>
         </div>
@@ -88,7 +93,8 @@ and open the template in the editor.
     </body>
         
         
-</html>        
+</html>      
+
 	
 
 
