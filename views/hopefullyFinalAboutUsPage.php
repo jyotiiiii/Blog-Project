@@ -30,7 +30,10 @@ and open the template in the editor.
     
     <div class="column">
         <img src="images/UNP_39609_Lloyds_Omolade Ojo004.png" alt="omo" style="width:50%">
-        <p>Hi Everyone! I’m Omo and I love theatre, food and reading.</p>
+        <p>Hi Everyone! I’m Omo and my favourite things include watching theatre (I'm on a 
+            personal mission to watch The Lion King at least once a year for the rest of my life.)
+           When I'm not on personal missions, I enjoy going to Open Mics, eating tons of food and reading. 
+           Stay tuned for more reviews on the latest theatre news! </p>
     </div>
     
     
