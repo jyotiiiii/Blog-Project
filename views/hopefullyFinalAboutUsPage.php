@@ -60,8 +60,10 @@ and open the template in the editor.
     
      <div class="column">
          <img src="images/najwa.png" alt="najwa" style="width:50%">
-         <p>Najwa is a very happy and cheerful girl. She is second name to fashion and styling, with immense knowledge of latest trends, colour schemes and travel. She is well travelled and is an expert in designer brands.</p>
-    </div>
+        <p>BONJOUR ALL, and welcome to my Fashion blog where you can see my personal style input and Tips for everyone.<br>Originally born in Morocco I have grown up in France and  moved to London a few years ago to pursue my dreams – however there is so much more to me than meets the eye. Fashion and music were always a big part of my life.<br>A fun fact about me; When I first came to London I did not speak a world of English and now you can’t stop me from talking LOL, It was a very big challenge but so much worth it as London is the dream for Fashion Lovers!
+        <br>I would like to thank you for being here right now, reading this and browsing through my blog.</p>
+
+        </div>
 </div>
 
 <div class="content">
