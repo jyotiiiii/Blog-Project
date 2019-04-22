@@ -1,4 +1,4 @@
-<p>Here is a list of all articles:</p>
+    <p>Here is a list of all articles:</p>
 
 <?php foreach($articles as $article) { ?>
   <p>

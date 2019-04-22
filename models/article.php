@@ -4,15 +4,13 @@
     // we define 3 attributes
     public $id;
     public $blogger_id;
-    public $comment_id;
     public $headline;
     public $text;
 //    public $blogger_name; //concat first_name . last_name
 
-    public function __construct($id, $blogger_id, $comment_id, $headline, $text) {
-      $this->id    = $id;
-      $this->blogger_id  = $blogger_id;
-      $this->comment_id = $comment_id;
+    public function __construct($id, $blogger_id, $headline, $text) {
+      $this->id = $id;
+      $this->blogger_id = $blogger_id;
       $this->headline = $headline;
       $this->text = $text;
 //      $this->blogger_name = $blogger_name;
@@ -21,10 +19,11 @@
     public static function all() {
       $list = [];
       $db = Db::getInstance();
-      $req = $db->query('SELECT * FROM article');
-      // we create a list of Product objects from the database results
+      $req = $db->query('SELECT * FROM article INNER JOIN blogger
+ON blogger.blogger_id = article.blogger_id');
+      // we create a list of Article objects from the database results
       foreach($req->fetchAll() as $article) {
-        $list[] = new Article($article['id'], $article['blogger_id'], $article['comment_id'], $article['headline'], $article['text']);
+        $list[] = new Article($article['id'], $article['blogger_id'], $article['headline'], $article['text']);
       }
       return $list;
     }
@@ -32,12 +31,13 @@
       $db = Db::getInstance();
       //use intval to make sure $id is an integer
       $id = intval($id);
-      $req = $db->prepare('SELECT * FROM product WHERE id = :id');
+      $req = $db->prepare('SELECT * FROM article INNER JOIN blogger
+ON blogger.blogger_id = article.blogger_id WHERE id = :id');
       //the query was prepared, now replace :id with the actual $id value
       $req->execute(array('id' => $id));
-      $product = $req->fetch();
+      $article = $req->fetch();
 if($article){
-      return new Article($article['id'], $article['headline'], $article['text']);
+      return new Article($article['id'], $article['blogger_id'], $article['headline'], $article['text']);
     }
     else
     {
@@ -94,9 +94,9 @@ $headline = $filteredHeadline;
 $text = $filteredText;
 $req->execute();
 
-//upload product image if it exists
+//upload article image if it exists
         if (!empty($_FILES[self::InputKey]['name'])) {
-		Product::uploadFile($name);
+		Article::uploadFile($name);
 	}
 
     }
@@ -126,7 +126,7 @@ $headline = $filteredHeadline;
 $text = $filteredText;
 $req->execute();
 
-//upload product image
+//upload article image
 //Article::uploadFile($name);
     }
 
@@ -169,7 +169,7 @@ public static function remove($id) {
       $db = Db::getInstance();
       //make sure $id is an integer
       $id = intval($id);
-      $req = $db->prepare('delete FROM product WHERE id = :id');
+      $req = $db->prepare('delete FROM article WHERE id = :id');
       // the query was prepared, now replace :id with the actual $id value
       $req->execute(array('id' => $id));
   }

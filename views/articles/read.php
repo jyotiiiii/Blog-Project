@@ -1,11 +1,11 @@
-<p>This is the requested article:</p>
 
-<p>Article ID: <?php echo $article->id; ?></p>
-<p>Headline: <?php echo $article->headline; ?></p>
-<p>Author: <?php// echo $article->first_name; ?> <?php //echo $article->first_name; ?> </p>
-<p>Tags: <?php //echo $article->tag_name; ?></p>
+
+<!--<p>Article ID: <?php // echo $article->id; ?></p>-->
+<p> <?php echo $article->headline; ?></p>
+<!--<p>Author: <?php// echo $article->first_name; ?> <?php //echo $article->first_name; ?> </p>-->
+<!--<p>Tags: <?php //echo $article->tag_name; ?></p>-->
 <p><?php echo $article->text; ?></p>
-<p>Tags: <?php echo $article->tag_name; ?></p>
+<!--<p>Tags: <?php // echo $article->tag_name; ?></p>-->
 <?php 
 
 ////Need to point to pinterest url or file location
