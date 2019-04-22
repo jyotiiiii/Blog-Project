@@ -1,4 +1,5 @@
 <?php
+//test comment from omo 
   class Article {
 
     // we define 3 attributes
