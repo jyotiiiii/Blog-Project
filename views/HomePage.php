@@ -58,23 +58,23 @@
         <div class="row">
             <div class="column" style="background-color:#FFFF;">
                 <img src="images/frames.jpeg" height="200" width="300" alt=""/>
-                <a href='?controller=article&action=read'>
+                <a href='article_controller=article&action=read'>
                 <h2>Headline</h2></a>
-                <p><a href='?controller=article&action=read'>text</a></p>
+                <p><a href='article_controller=article&action=read'>text</a></p>
                 <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
             </div>
             
             <div class="column" style="background-color:#FFFF;">
                 <img src="images/frames.jpeg" height="200" width="300" alt=""/>
-                <a href='?controller=article&action=read'>
+                <a href='article_controller=article&action=read'>
                 <h2>Headline</h2></a>
-                <p><a href='?controller=article&action=read'>text</a></p>
+                <p><a href='article_controller=article&action=read'>text</a></p>
                 <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
             </div>
             
             <div class="column" style="background-color:#FFFF;">
                 <img src="images/frames.jpeg" height="200" width="300" alt=""/>
-                <a href='?controller=article&action=read'>
+                <a href='article_controller=article&action=read'>
                 <h2>Headline</h2></a>
                 <p><a href='?controller=article&action=read'>text</a></p>
                 <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
@@ -84,32 +84,51 @@
         <div class="row">
             <div class="column" style="background-color:#FFFF;">
                 <img src="images/frames.jpeg" height="200" width="300" alt=""/>
-                <a href='?controller=article&action=read'>
+                <a href='article_controller=article&action=read'>
                 <h2>Headline</h2></a>
-                <p><a href='?controller=article&action=read'>text</a></p>
+                <p><a href='article_controller=article&action=read'>text</a></p>
                 <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
             </div>
             
             <div class="column" style="background-color:#FFFF;">
                 <img src="images/frames.jpeg" height="200" width="300" alt=""/>
-                <a href='?controller=article&action=read'>
+                <a href='article_controller=article&action=read'>
                 <h2>Headline</h2></a>
-                <p><a href='?controller=article&action=read'>text</a></p>
+                <p><a href='article_controller=article&action=read'>text</a></p>
                 <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
             </div>
             
             <div class="column" style="background-color:#FFFF;">
                 <img src="images/frames.jpeg" height="200" width="300" alt=""/>
-                <a href='?controller=article&action=read'>
+                <a href='article_controller=article&action=read'>
                 <h2>Headline</h2></a>
-                <p><a href='?controller=article&action=read'>text</a></p>
+                <p><a href='article_controller=article&action=read'>text</a></p>
                 <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
             </div>
         </div>    
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        
+        
+        <!--    -----------comment----------->
+        <div class="container">
+          <form method="post" action="">
+            <div class="form-group row">
+                <label for="comment_text" class="col-sm-2 col-form-label">Comment</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="title" name="comment_text" value="">
+                    </div>
+            </div>
+                    <button type="submit" name="postComment" class="btn btn-success">Add Comment</button>
 
+          </form>
+        </div>
+        
 <script src="HomePageScript.js" type="text/javascript"></script>
 <div>
-    <?php require_once('routes.php'); ?>
+  <?php // require_once("../routes.php"); ?>
 </div>
 
 
