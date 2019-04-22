@@ -2,18 +2,20 @@
   class Article {
 
     // we define 3 attributes
-    public $article_id;
+    public $id;
     public $blogger_id;
     public $comment_id;
     public $headline;
     public $text;
+//    public $blogger_name; //concat first_name . last_name
 
-    public function __construct($article_id, $blogger_id, $comment_id, $headline, $text) {
-      $this->article_id    = $article_id;
+    public function __construct($id, $blogger_id, $comment_id, $headline, $text) {
+      $this->id    = $id;
       $this->blogger_id  = $blogger_id;
       $this->comment_id = $comment_id;
       $this->headline = $headline;
       $this->text = $text;
+//      $this->blogger_name = $blogger_name;
     }
 
     public static function all() {
@@ -22,21 +24,20 @@
       $req = $db->query('SELECT * FROM article');
       // we create a list of Product objects from the database results
       foreach($req->fetchAll() as $article) {
-        $list[] = new Article($article['article_id'], $article['blogger_id'], $article['comment_id'], $article['headline'], $article['text']);
+        $list[] = new Article($article['id'], $article['blogger_id'], $article['comment_id'], $article['headline'], $article['text']);
       }
       return $list;
     }
-
-    public static function find($article_id) {
+    public static function find($id) {
       $db = Db::getInstance();
-      //use intval to make sure $article_id is an integer
-      $article_id = intval($article_id);
-      $req = $db->prepare('SELECT * FROM article WHERE article_id = :article_id');
-      //the query was prepared, now replace :article_id with the actual $article_id value
-      $req->execute(array('article_id' => $article_id));
-      $article = $req->fetch();
+      //use intval to make sure $id is an integer
+      $id = intval($id);
+      $req = $db->prepare('SELECT * FROM product WHERE id = :id');
+      //the query was prepared, now replace :id with the actual $id value
+      $req->execute(array('id' => $id));
+      $product = $req->fetch();
 if($article){
-      return new Article($article['article_id'], $article['blogger_id'], $article['comment_id'], $article['headline'], $article['text']);
+      return new Article($article['id'], $article['headline'], $article['text']);
     }
     else
     {
@@ -44,11 +45,34 @@ if($article){
         throw new Exception('A real exception should go here');
     }
     }
+    
+//    public static function find($id) {
+//      $db = Db::getInstance();
+//      //use intval to make sure $id is an integer
+//      $id = intval($id);
+//      
+//      $req = $db->prepare("SELECT concat(blogger.first_name, ' ', blogger.last_name),
+//          article.headline, article.text
+//    FROM Article
+//    INNER JOIN blogger
+//    ON blogger.blogger_id = article.blogger_id");
+//      //the query was prepared, now replace :id with the actual $id value
+//      $req->execute(array('id' => $id));
+//      $article = $req->fetch();
+//if($article){
+//      return new Article($article['headline'], $article['first_name'], $article['text']);
+//    }
+//    else
+//    {
+//        //replace with a more meaningful exception
+//        throw new Exception('A real exception should go here');
+//    }
+//    }
 
-public static function update($article_id) {
+public static function update($id) {
     $db = Db::getInstance();
-    $req = $db->prepare("Update article set blogger_id=:blogger_id, comment_id=:comment_id, headline=:headline, text=:text where article_id=:article_id");
-    $req->bindParam(':article_id', $article_id);
+    $req = $db->prepare("Update article set blogger_id=:blogger_id, comment_id=:comment_id, headline=:headline, text=:text where id=:id");
+    $req->bindParam(':id', $id);
     $req->bindParam(':blogger_id', $blogger_id);
     $req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
@@ -56,8 +80,8 @@ public static function update($article_id) {
 // set name and price parameters and execute
     
 //    JYOTI CHANGE THIS CODE
-    if(isset($_POST['article_id'])&& $_POST['article_id']!=""){
-        $filteredArticleID = filter_input(INPUT_POST,'article_id', FILTER_SANITIZE_SPECIAL_CHARS);
+    if(isset($_POST['id'])&& $_POST['id']!=""){
+        $filteredArticleID = filter_input(INPUT_POST,'id', FILTER_SANITIZE_SPECIAL_CHARS);
     }
     if(isset($_POST['headline'])&& $_POST['headline']!=""){
         $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -65,7 +89,7 @@ public static function update($article_id) {
     if(isset($_POST['text'])&& $_POST['text']!=""){
         $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-$article_id = $filteredArticleID;
+$id = $filteredArticleID;
 $headline = $filteredHeadline;
 $text = $filteredText;
 $req->execute();
@@ -80,7 +104,7 @@ $req->execute();
     public static function add() {
     $db = Db::getInstance();
     $req = $db->prepare("Insert into article(headline, text) values (:headline, :text)");
-    //$req->bindParam(':article_id', $article_id);
+    //$req->bindParam(':id', $id);
     //$req->bindParam(':blogger_id', $blogger_id);
    //$req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
@@ -88,8 +112,8 @@ $req->execute();
     
     //JYOTI CHANGE THIS CODE
 // set parameters and execute
-//    if(isset($_POST['article_id'])&& $_POST['article_id']!=""){
-//        $filteredArticleID = filter_input(INPUT_POST,'article_id', FILTER_SANITIZE_SPECIAL_CHARS);
+//    if(isset($_POST['id'])&& $_POST['id']!=""){
+//        $filteredArticleID = filter_input(INPUT_POST,'id', FILTER_SANITIZE_SPECIAL_CHARS);
  //   }
     if(isset($_POST['headline'])&& $_POST['headline']!=""){
         $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -97,7 +121,7 @@ $req->execute();
     if(isset($_POST['text'])&& $_POST['text']!=""){
         $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-//$article_id = $filteredArticleID;
+//$id = $filteredArticleID;
 $headline = $filteredHeadline;
 $text = $filteredText;
 $req->execute();
@@ -141,13 +165,13 @@ const InputKey = 'myUploader';
 //		unlink($tempFile); 
 //	}
 //}
-public static function remove($article_id) {
+public static function remove($id) {
       $db = Db::getInstance();
-      //make sure $article_id is an integer
-      $article_id = intval($article_id);
-      $req = $db->prepare('delete FROM product WHERE article_id = :article_id');
-      // the query was prepared, now replace :article_id with the actual $article_id value
-      $req->execute(array('article_id' => $article_id));
+      //make sure $id is an integer
+      $id = intval($id);
+      $req = $db->prepare('delete FROM product WHERE id = :id');
+      // the query was prepared, now replace :id with the actual $id value
+      $req->execute(array('id' => $id));
   }
   
 }

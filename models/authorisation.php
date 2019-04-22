@@ -1,6 +1,6 @@
 <?php
 
-class Authorization {
+class Authorisation {
     private $database;
     
 public function __construct() {

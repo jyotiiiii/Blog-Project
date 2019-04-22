@@ -22,12 +22,33 @@
     // call the requested action
     $controller->{ $action }();
   }
-
+//switch ($action) {
+//        case 'login':
+//        $blogger_id = $_POST['blogger_id'];
+//        $password = $_POST['password'];    
+//        
+//      if($blogger_controller->login($blogger_id, $password)) {
+//          header("Location:homeprivate.php");
+//      } else {
+//          header("Location:error.php");
+//      }
+//     break;
+//        
+//        case 'logout':
+//        $blogger_controller->logout();
+//        header("Location:loginprivate.php");            //header: function that redirects
+//        
+//    break;
+//        default:
+//        header("Location:loginprivate.php"); 
+//    break;        
+//    }
 // for validation we list the allowed controllers and their actions
 // Add an entry for each new controller and its actions
 $controllers = array('pages' => ['home', 'error'],
                     'article' => ['readAll','read','create','update','delete'],
                     'product' => ['readAll','read','create','update','delete'],
+                    'blogger' => ['login','logout','readAll','read','create','update','delete'],
                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
                     );
 

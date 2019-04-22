@@ -1,30 +1,38 @@
 <?php
 
 class Blogger_controller {
-    public function blogger_controller() {
-            
+    //constructor
+    public function blogger_controller() 
+    {
+    //constructor is empty for now        
     }
-    
-    public function login($username, $password) {
-        if($this->authenticate($username, $password)) {
+    public function create ($blogger_id, $password)
+    {
+    //creates blogger in the db
+    }        
+    public function login($blogger_id, $password) {
+        if($this->authenticate($blogger_id, $password)) {
+            //start the session for the user
             session_start();
+        //instantiate the blogger object
+        $user = new blogger($blogger_id);
         
-        $user = new blogger($username);
-        $_SESSION['user'] = $user;
+        $_SESSION['blogger'] = $blogger;
         return true;
         }   else {
         return false;
             }
     }
     
-static function authenticate($username, $password) {
+static function authenticate($blogger_id, $password) {
     //$authentic = false;
     /*if ($username == 'admin' && $password == 'admin') {
             $authentic = true;
         } */
+    //chack against db
       $db = DB::getInstance();
-      if ($db->prepare("SELECT * FROM blogger WHERE email = ? AND password = ?")) {
-         $db->bind_param($username, $password);
+      if ($db->prepare("SELECT * FROM blogger WHERE blogger_id = ? AND password = ?")) {
+         $db->bind_param($blogger_id, $password);
          $db->execute();
          $db->store_result();
             if ($db->num_rows > 0) {

@@ -1,6 +1,6 @@
 <p>This is the requested article:</p>
 
-
+<p>Article ID: <?php echo $article->id; ?></p>
 <p>Headline: <?php echo $article->headline; ?></p>
 <p>Author: <?php// echo $article->first_name; ?> <?php //echo $article->first_name; ?> </p>
 <p>Tags: <?php //echo $article->tag_name; ?></p>

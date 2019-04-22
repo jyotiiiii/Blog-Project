@@ -1,6 +1,6 @@
 <?php
  session_start();
- if(isset($_SESSION['user'])) header('Location:home.php');
+ if(isset($_SESSION['user'])) header('Location:homeprivate.php');
 ?>
 <html>
     <head>
@@ -19,13 +19,13 @@
     <body>
         <div id='login-controls'>
         <h2>Login Form</h2>
-        <form method='POST' action='index.php'>
-        <p>Username:<br />
-            <input type='text' name='user'/>
+        <form method='POST' action='indexprivate.php'>
+        <p>Blogger ID:<br />
+            <input type='text' name='blogger_id'/>
         </p>
         <p>Password:<br />
             <input type='password' name='pass'/>
-            <input type='submit' name='op' value='login'/>
+            <input type='submit' name='action' value='login'/>
         </p>
         </form>
         </div>

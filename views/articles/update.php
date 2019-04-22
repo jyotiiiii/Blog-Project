@@ -2,7 +2,7 @@
 <form action="" method="POST" class="w3-container" enctype="multipart/form-data">
     <h2>Update your Article</h2>
         <p>
-        <input class="w3-input" type="text" name="article_id" value="<?= $article->article_id; ?>">
+        <input class="w3-input" type="text" name="article_id" value="<?= $article->id; ?>">
         <label>Article_id</label>
     </p>
     <p>
