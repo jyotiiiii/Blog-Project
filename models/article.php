@@ -9,8 +9,8 @@
     public $text;
 
     public function __construct($article_id, $blogger_id, $comment_id, $headline, $text) {
-      $this->article_id    = $article_id;
-      $this->blogger_id  = $blogger_id;
+      $this->article_id = $article_id;
+      $this->blogger_id = $blogger_id;
       $this->comment_id = $comment_id;
       $this->headline = $headline;
       $this->text = $text;
@@ -79,25 +79,31 @@ $req->execute();
     
     public static function add() {
     $db = Db::getInstance();
-    $req = $db->prepare("Insert into article(headline, text) values (:headline, :text)");
-    //$req->bindParam(':article_id', $article_id);
-    //$req->bindParam(':blogger_id', $blogger_id);
-   //$req->bindParam(':comment_id', $comment_id);
+    $req = $db->prepare("Insert into article(article_id, blogger_id, comment_id, headline, text) values (:article_id, :blogger_id, :comment_id, :headline, :text)");
+    $req->bindParam(':article_id', $article_id);
+    $req->bindParam(':blogger_id', $blogger_id);
+   $req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
     $req->bindParam(':text', $text);
     
     //JYOTI CHANGE THIS CODE
 // set parameters and execute
-//    if(isset($_POST['article_id'])&& $_POST['article_id']!=""){
-//        $filteredArticleID = filter_input(INPUT_POST,'article_id', FILTER_SANITIZE_SPECIAL_CHARS);
- //   }
+    if(isset($_POST['article_id'])&& $_POST['article_id']!=""){
+      $filteredArticleID = filter_input(INPUT_POST,'article_id', FILTER_SANITIZE_SPECIAL_CHARS);
+   }
+    if(isset($_POST['blogger_id'])&& $_POST['blogger_id']!=""){
+        $filteredHeadline = filter_input(INPUT_POST,'blogger_id', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+    if(isset($_POST['comment_id'])&& $_POST['comment_id']!=""){
+        $filteredHeadline = filter_input(INPUT_POST,'comment_id', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
     if(isset($_POST['headline'])&& $_POST['headline']!=""){
         $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
     }
     if(isset($_POST['text'])&& $_POST['text']!=""){
         $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-//$article_id = $filteredArticleID;
+$article_id = $filteredArticleID;
 $headline = $filteredHeadline;
 $text = $filteredText;
 $req->execute();
