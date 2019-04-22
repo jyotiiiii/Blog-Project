@@ -30,9 +30,7 @@
           <li class="nav-item">
             <a class="nav-link" href="indexPublic.php">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="?controller=article&action=readAll">Articles</a>
           </li>
@@ -46,7 +44,7 @@
             <a class="nav-link" href="?controller=article&action=create">Add Article</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
+            <a class="nav-link" href="?controller=pages&action=about">About Us</a>
           </li>
         </ul>
       </div>

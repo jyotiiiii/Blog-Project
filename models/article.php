@@ -103,9 +103,9 @@ $req->execute();
     
     public static function add() {
     $db = Db::getInstance();
-    $req = $db->prepare("Insert into article(headline, text) values (:headline, :text)");
+    $req = $db->prepare("Insert into article(headline, text, blogger_id) values (:headline, :text, :blogger_id)");
     //$req->bindParam(':id', $id);
-    //$req->bindParam(':blogger_id', $blogger_id);
+    $req->bindParam(':blogger_id', $blogger_id);
    //$req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
     $req->bindParam(':text', $text);
@@ -115,6 +115,9 @@ $req->execute();
 //    if(isset($_POST['id'])&& $_POST['id']!=""){
 //        $filteredArticleID = filter_input(INPUT_POST,'id', FILTER_SANITIZE_SPECIAL_CHARS);
  //   }
+        if(isset($_POST['blogger_id'])&& $_POST['blogger_id']!=""){
+        $filteredBlogger_ID = filter_input(INPUT_POST,'blogger_id', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
     if(isset($_POST['headline'])&& $_POST['headline']!=""){
         $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
     }
@@ -122,6 +125,7 @@ $req->execute();
         $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
     }
 //$id = $filteredArticleID;
+$blogger_id = $filteredBlogger_ID;
 $headline = $filteredHeadline;
 $text = $filteredText;
 $req->execute();
