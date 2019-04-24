@@ -102,6 +102,9 @@ $req->execute();
     }
     
     public static function add() {
+    if($_FILES){
+        Article::upload();
+    }
     $db = Db::getInstance();
     $req = $db->prepare("Insert into article(headline, text, blogger_id) values (:headline, :text, :blogger_id)");
     //$req->bindParam(':id', $id);
@@ -131,11 +134,13 @@ $text = $filteredText;
 $req->execute();
 
 //upload article image
-//Article::uploadFile($name);
+//Article::upload($name);
     }
 
 const AllowedTypes = ['image/jpeg', 'image/jpg'. 'image/png'];
 const InputKey = 'myUploader';
+
+
 
 //die() function calls replaced with trigger_error() calls
 //replace with structured exception handling
@@ -177,6 +182,32 @@ public static function remove($id) {
       // the query was prepared, now replace :id with the actual $id value
       $req->execute(array('id' => $id));
   }
+public static function upload() {
+        if ($_FILES) {
+          $name= $_FILES['myUploader']['name'];
+          switch($_FILES['myUploader']['type'])
+          {
+           case 'image/jpg'  : $ext = 'jpg'; break;
+           case 'image/jpeg' : $ext = 'jpeg'; break;
+           case 'image/gif'  : $ext = 'gif'; break;
+           case 'image/png'  : $ext = 'png'; break;
+           default:            $ext = '';    break;
+          }
+          
+        if($ext)
+        {
+          echo getcwd();
+          $imageName = "image.$ext";  
+          move_uploaded_file($_FILES['myUploader']['tmp_name'], $imageName);           
+        } else {
+          echo "'$name' . is not accepted.";  
+        }
+          
+        } else {
+            echo "No image has been uploaded.";
+        }
+    }  
+  
   
 }
 ?>

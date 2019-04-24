@@ -31,9 +31,10 @@
 	   name="MAX_FILE_SIZE" 
          value="10000000"
          />
-//Need to point to pinterest url or file location
+
+  <!--Need to point to pinterest url or file location-->
   <input type="file" name="myUploader" class="w3-btn w3-pink"/>
   <p>
-    <input class="w3-btn w3-pink" type="submit" value="Add Product">
+    <input class="w3-btn w3-pink" type="submit" value="Add Article">
   </p>
 </form>
