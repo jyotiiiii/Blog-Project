@@ -4,11 +4,11 @@
 class authenticate{
 
 public function authlogin()
-{if(!empty($_POST)) {
+{ if(!empty($_POST)){
                $username = $_POST['username'];
                $password = $_POST['password'];
                try {
-                   $sql = ("SELECT * FROM blogger WHERE 'username= ? AND `password` =MD5(?)");
+                   $sql = ("SELECT * FROM blogger WHERE 'username'= ? AND 'password' =MD5(?)");
                    $login =$stmt->prepare($sql);
                    $login->execute([$username, $password]);
                    $exists = $login->fetch();
@@ -24,7 +24,8 @@ public function authlogin()
                    } else {
                        header('Location: error.php');
                    }
-               }      
+               }  
 }
 }
-}
+
+

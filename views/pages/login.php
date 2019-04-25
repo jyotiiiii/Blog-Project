@@ -1,33 +1,38 @@
+<!DOCTYPE html>
 <?php
+session_start();
+
+require_once('routes.php');
+require_once('connection.php');
+
 ?>
+
+
 <html>
     <head>
-        <style>
-            #login-controls {
-                margin: 0 auto;
-                border: 1px solid #ccc;
-                padding: 50px;
-                width: 300px;
-            }
-            .error-text {
-                color: #f00;
-            }
-        </style>
-    </head>    
-    <body>
-        <div id='login-controls'>
-        <h2>Login Form</h2>
-        <p>Blogger ID:<br />
-            <input type='text' name='username'/>
-        </p>
-        <p>Password:<br />
-            <input type='password' name='pass'/>
-            <input type='submit' name='action' value='login'/>
-        </p>
-        </form>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="Styles.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet">
+    </head>
+    <body class="login">
+        <div> 
+            <form class="customer" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" />
+                </div>
+                <input type="submit" value="Login" />
+            </form>
+         
         </div>
+    
+
     </body>
 </html>
-<?php
- require_once('routes.php');
- ?>
+
+ 

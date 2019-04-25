@@ -18,9 +18,20 @@ class PagesController {
     }
     
     public function login(){
-        require_once('views/pages/login.php');
-    }
+          require_once('views/pages/login.php');
+          if($_SERVER['REQUEST_METHOD'] == 'POST') 
+              
+          while(!isset($_POST['submit'])){
+              $username = $_POST['username'];
+              $password = $_POST['password']; 
+              return call('pages','about');
+                   }
+      
+//        
+        }
+       
     
+  
     public function logout(){}
     
     public function register(){}
