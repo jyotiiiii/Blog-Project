@@ -46,19 +46,14 @@
           <li class="nav-item">
             <a class="nav-link" href="?controller=pages&action=about">About Us</a>
           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="?controller=pages&action=login">Login</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
       
-<!--    <header class="w3-container w3-gray">
-      <a href='/MVC_Skeleton'>Home</a>   
-      <a href='index.php'>Home</a>
-      <a href='?controller=article&action=readAll'>Articles</a>
-      <a href='?controller=product&action=readAll'>Products</a>
-      <a href='?controller=product&action=create'>Add Article</a>
-      <a href='?controller=article&action=create'>Add Article</a>
-    </header>-->
 <div class="w3-container w3-pink">
     <?php require_once('routes.php'); ?>
 </<div>

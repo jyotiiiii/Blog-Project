@@ -1,6 +1,4 @@
 <?php
- session_start();
- if(isset($_SESSION['user'])) header('Location:homeprivate.php');
 ?>
 <html>
     <head>
@@ -19,9 +17,8 @@
     <body>
         <div id='login-controls'>
         <h2>Login Form</h2>
-        <form method='POST' action='indexprivate.php'>
         <p>Blogger ID:<br />
-            <input type='text' name='blogger_id'/>
+            <input type='text' name='username'/>
         </p>
         <p>Password:<br />
             <input type='password' name='pass'/>
@@ -31,3 +28,6 @@
         </div>
     </body>
 </html>
+<?php
+ require_once('routes.php');
+ ?>
