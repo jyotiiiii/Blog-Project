@@ -16,4 +16,32 @@ class PagesController {
     public function about() {
       require_once('views/pages/hopefullyFinalAboutUsPage.php');
     }
+    
+    public function login(){
+        require_once('views/pages/login.php');
+    }
+    
+    public function logout(){}
+    
+    public function register(){}
 }
+
+//add login function to enable to tlogin
+
+// another one to logout to enable to logout
+
+//another one to register
+
+//login - table with username and password --- create session variable called username - session start
+
+// logout - destroy the session
+
+//authentication model - authlogin, authlogout, authregister
+
+//registration view, logic (Post/Get), register-post, login - get
+
+//controller - check request method, call the database codes, 
+
+//nav - if username exists , session stays, show logout button otherwise not.
+
+//
