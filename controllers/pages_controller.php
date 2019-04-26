@@ -17,25 +17,50 @@ class PagesController {
       require_once('views/pages/hopefullyFinalAboutUsPage.php');
     }
     
-    public function login(){
-          require_once('views/pages/login.php');
-          if($_SERVER['REQUEST_METHOD'] == 'POST') 
-              
-          while(!isset($_POST['submit'])){
-              $username = $_POST['username'];
-              $password = $_POST['password']; 
-              return call('pages','about');
-                   }
-      
+   
+    
+//    public function authlogin() {
+//      $this->blogger_id=$blogger_id;
+//      $this->username = $username;
+//      $this->password = $password; 
+//      $db = Db::getInstance();
+//     
+//    
+//        if(!empty($_POST)){
+//                    $username = $_POST['username'];
+//                    $password = $_POST['password'];
+//                    try {
+//                         $req =$db->prepare("SELECT * FROM blogger WHERE 'username'= ? AND 'password' =MD5(?)");
+//                        
+//                         $req->execute();
+//                         $results = $req->fetch();
+//                                   
+//                    if ($results) {
+//                        header('Location: CustomerPage.php');
+//                    } else {
+//                        header('Location: ErrorPage.php');
+//                    }
+//                    }
+//                 catch (Exception $ex) {
+//                    $ex->getMessage();
+//                    exit("Something went wrong!");
+////                }
+//        }
+//               
 //        
-        }
-       
-    
-  
-    public function logout(){}
-    
-    public function register(){}
+//               
+//     } 
+
+            
+
+//    
+//    public function logout(){}
+//    
+//    public function register(){}
 }
+
+
+
 
 //add login function to enable to tlogin
 

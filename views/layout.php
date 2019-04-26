@@ -47,7 +47,12 @@
             <a class="nav-link" href="?controller=pages&action=about">About Us</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="?controller=pages&action=login">Login</a>
+            <a class="nav-link" href="?controller=login&action=login">Login</a>
+          
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?controller=login&action=register">Register</a>
+          
           </li>
         </ul>
       </div>
