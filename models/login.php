@@ -22,21 +22,18 @@ class authenticate{
                     $username = $_POST['username'];
                     $password = $_POST['password'];
                     
-                    try{
-                         $req =$db->prepare("SELECT * FROM blogger WHERE 'username'= ? AND 'password' =MD5(?)");
+                  
+                         $sql =$db->prepare("SELECT username, password FROM blogger WHERE 'username'= ? AND 'password' =MD5(?)");
                         
-                         $req->execute();
-                         $authenticate = $req->fetch(); 
+                         $req->execute($sql);
+                         $authenticate = $req->fetch([$username, $password]); 
                          
                          if ($authenticate) {
                         header('Location: index.php');
                     } else {
                         header('Location: error.php');
                     }
-                } catch (Exception $ex) {
-                    $ex->getMessage();
-                    exit("Something went wrong!");
-                }
+                
                 $db = null;
             } 
     }
