@@ -30,10 +30,7 @@ and open the template in the editor.
     
     <div class="column">
         <img src="images/UNP_39609_Lloyds_Omolade Ojo004.png" alt="omo" style="width:50%">
-        <p>Hi Everyone! I’m Omo and my favourite things include watching theatre (I'm on a 
-            personal mission to watch The Lion King at least once a year for the rest of my life.)
-           When I'm not on personal missions, I enjoy going to Open Mics, eating tons of food and reading. 
-           Stay tuned for more reviews on the latest theatre news! </p>
+        <p>Hi Everyone! I’m Omo and I love theatre, food and reading.</p>
     </div>
     
     
@@ -63,10 +60,8 @@ and open the template in the editor.
     
      <div class="column">
          <img src="images/najwa.png" alt="najwa" style="width:50%">
-        <p>BONJOUR ALL, and welcome to my Fashion blog where you can see my personal style input and Tips for everyone.<br>Originally born in Morocco I have grown up in France and  moved to London a few years ago to pursue my dreams – however there is so much more to me than meets the eye. Fashion and music were always a big part of my life.<br>A fun fact about me; When I first came to London I did not speak a world of English and now you can’t stop me from talking LOL, It was a very big challenge but so much worth it as London is the dream for Fashion Lovers!
-        <br>I would like to thank you for being here right now, reading this and browsing through my blog.</p>
-
-        </div>
+         <p>Najwa is a very happy and cheerful girl. She is second name to fashion and styling, with immense knowledge of latest trends, colour schemes and travel. She is well travelled and is an expert in designer brands.</p>
+    </div>
 </div>
 
 <div class="content">

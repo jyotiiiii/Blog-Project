@@ -1,5 +1,4 @@
 <?php
-
   class Article {
 
     // we define 3 attributes
@@ -7,13 +6,15 @@
     public $blogger_id;
     public $headline;
     public $text;
+    public $description;
 //    public $blogger_name; //concat first_name . last_name
 
-    public function __construct($id, $blogger_id, $headline, $text) {
+      public function __construct($id, $blogger_id, $headline, $text, $description) {
       $this->id = $id;
       $this->blogger_id = $blogger_id;
       $this->headline = $headline;
       $this->text = $text;
+      $this->description = $description;
 //      $this->blogger_name = $blogger_name;
     }
 
@@ -24,7 +25,7 @@
 ON blogger.blogger_id = article.blogger_id');
       // we create a list of Article objects from the database results
       foreach($req->fetchAll() as $article) {
-        $list[] = new Article($article['id'], $article['blogger_id'], $article['headline'], $article['text']);
+        $list[] = new Article($article['id'], $article['blogger_id'], $article['headline'], $article['text'], $article['description']);
       }
       return $list;
     }
@@ -38,7 +39,7 @@ ON blogger.blogger_id = article.blogger_id WHERE id = :id');
       $req->execute(array('id' => $id));
       $article = $req->fetch();
 if($article){
-      return new Article($article['id'], $article['blogger_id'], $article['headline'], $article['text']);
+      return new Article($article['id'], $article['blogger_id'], $article['headline'], $article['text'], $article['description']);
     }
     else
     {
@@ -72,27 +73,36 @@ if($article){
 
 public static function update($id) {
     $db = Db::getInstance();
-    $req = $db->prepare("Update article set blogger_id=:blogger_id, comment_id=:comment_id, headline=:headline, text=:text where id=:id");
+    $req = $db->prepare("Update article set 
+            headline=:headline, text=:text, description=:description where id=:id");
+
+//            . "comment_id=:comment_id, "
     $req->bindParam(':id', $id);
-    $req->bindParam(':blogger_id', $blogger_id);
-    $req->bindParam(':comment_id', $comment_id);
+//    $req->bindParam(':blogger_id', $blogger_id);
+//    $req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
     $req->bindParam(':text', $text);
+    $req->bindParam(':description', $description);
+
 // set name and price parameters and execute
     
 //    JYOTI CHANGE THIS CODE
-    if(isset($_POST['id'])&& $_POST['id']!=""){
-        $filteredArticleID = filter_input(INPUT_POST,'id', FILTER_SANITIZE_SPECIAL_CHARS);
-    }
+//    if(isset($_POST['blogger_id'])&& $_POST['blogger_id']!=""){
+//        $filteredbloggerID = filter_input(INPUT_POST,'1', FILTER_SANITIZE_SPECIAL_CHARS);
+//    }
     if(isset($_POST['headline'])&& $_POST['headline']!=""){
         $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
     }
     if(isset($_POST['text'])&& $_POST['text']!=""){
         $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
     }
-$id = $filteredArticleID;
+    if(isset($_POST['description'])&& $_POST['description']!=""){
+        $filteredDescription = filter_input(INPUT_POST,'description', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
+//$blogger_id = $filteredbloggerID;
 $headline = $filteredHeadline;
 $text = $filteredText;
+$description = $filteredDescription;
 $req->execute();
 
 //upload article image if it exists
@@ -103,36 +113,50 @@ $req->execute();
     }
     
     public static function add() {
+    if($_FILES){
+        Article::upload();
+    }
     $db = Db::getInstance();
-    $req = $db->prepare("Insert into article(headline, text) values (:headline, :text)");
+    $req = $db->prepare("Insert into article(headline, text, blogger_id, description) values (:headline, :text, :blogger_id, :description)");
     //$req->bindParam(':id', $id);
-    //$req->bindParam(':blogger_id', $blogger_id);
+    $req->bindParam(':blogger_id', $blogger_id);
    //$req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
     $req->bindParam(':text', $text);
-    
+    $req->bindParam(':description', $description);
+
     //JYOTI CHANGE THIS CODE
 // set parameters and execute
 //    if(isset($_POST['id'])&& $_POST['id']!=""){
 //        $filteredArticleID = filter_input(INPUT_POST,'id', FILTER_SANITIZE_SPECIAL_CHARS);
  //   }
+        if(isset($_POST['blogger_id'])&& $_POST['blogger_id']!=""){
+        $filteredBlogger_ID = filter_input(INPUT_POST,'blogger_id', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
     if(isset($_POST['headline'])&& $_POST['headline']!=""){
         $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
     }
     if(isset($_POST['text'])&& $_POST['text']!=""){
         $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
     }
+    if(isset($_POST['description'])&& $_POST['description']!=""){
+        $filteredDescription = filter_input(INPUT_POST,'description', FILTER_SANITIZE_SPECIAL_CHARS);
+    }
 //$id = $filteredArticleID;
+$blogger_id = $filteredBlogger_ID;
 $headline = $filteredHeadline;
 $text = $filteredText;
+$description = $filteredDescription;
 $req->execute();
 
 //upload article image
-//Article::uploadFile($name);
+//Article::upload($name);
     }
 
 const AllowedTypes = ['image/jpeg', 'image/jpg'. 'image/png'];
 const InputKey = 'myUploader';
+
+
 
 //die() function calls replaced with trigger_error() calls
 //replace with structured exception handling
@@ -174,6 +198,32 @@ public static function remove($id) {
       // the query was prepared, now replace :id with the actual $id value
       $req->execute(array('id' => $id));
   }
+public static function upload() {
+        if ($_FILES) {
+          $name= $_FILES['myUploader']['name'];
+          switch($_FILES['myUploader']['type'])
+          {
+           case 'image/jpg'  : $ext = 'jpg'; break;
+           case 'image/jpeg' : $ext = 'jpeg'; break;
+           case 'image/gif'  : $ext = 'gif'; break;
+           case 'image/png'  : $ext = 'png'; break;
+           default:            $ext = '';    break;
+          }
+          
+        if($ext)
+        {
+          echo getcwd();
+          $imageName = "image.$ext";  
+          move_uploaded_file($_FILES['myUploader']['tmp_name'], $imageName);           
+        } else {
+          echo "'$name' . is not accepted.";  
+        }
+          
+        } else {
+            echo "No image has been uploaded.";
+        }
+    }  
+  
   
 }
 ?>

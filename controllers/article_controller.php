@@ -30,7 +30,8 @@ class ArticleController {
           require_once('views/articles/create.php');
       }
       else { 
-            Article::add();
+          Article::upload();  
+          Article::add();
              
             $articles = Article::all(); //$products is used within the view
             require_once('views/articles/readAll.php');
@@ -51,8 +52,8 @@ class ArticleController {
       else
           { 
             $id = $_GET['id'];
-            Article::update($id);
-                        
+            Article::update($id); 
+            
             $articles = Article::all();
             require_once('views/articles/readAll.php');
       }
@@ -64,8 +65,9 @@ class ArticleController {
             $articles = Article::all();
             require_once('views/articles/readAll.php');
       }
+     
       
-    }
+}
     
     
   

@@ -24,11 +24,11 @@
   }
 //switch ($action) {
 //        case 'login':
-//        $blogger_id = $_POST['blogger_id'];
+//        $username = $_POST['username'];
 //        $password = $_POST['password'];    
 //        
-//      if($blogger_controller->login($blogger_id, $password)) {
-//          header("Location:homeprivate.php");
+//      if($blogger_controller->login($username, $password)) {
+//          header("Location:index.php");
 //      } else {
 //          header("Location:error.php");
 //      }
@@ -36,19 +36,21 @@
 //        
 //        case 'logout':
 //        $blogger_controller->logout();
-//        header("Location:loginprivate.php");            //header: function that redirects
+//        header("Location:login.php");            //header: function that redirects
 //        
 //    break;
 //        default:
-//        header("Location:loginprivate.php"); 
+//        header("Location:login.php"); 
 //    break;        
 //    }
-// for validation we list the allowed controllers and their actions
-// Add an entry for each new controller and its actions
-$controllers = array('pages' => ['home', 'error'],
+ //for validation we list the allowed controllers and their actions
+ //Add an entry for each new controller and its actions
+     
+$controllers = array('pages' => ['home', 'error', 'about'],
+                    'login' => ['login','register'],
                     'article' => ['readAll','read','create','update','delete'],
                     'product' => ['readAll','read','create','update','delete'],
-                    'blogger' => ['login','logout','readAll','read','create','update','delete'],
+//                    'blogger' => ['login','logout','readAll','read','create','update','delete'],
                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
                     );
 

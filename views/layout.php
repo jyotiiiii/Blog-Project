@@ -28,11 +28,9 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="indexPublic.php">Home</a>
+            <a class="nav-link" href="index.php">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="?controller=article&action=readAll">Articles</a>
           </li>
@@ -46,21 +44,21 @@
             <a class="nav-link" href="?controller=article&action=create">Add Article</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
+            <a class="nav-link" href="?controller=pages&action=about">About Us</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="?controller=login&action=login">Login</a>
+          
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="?controller=login&action=register">Register</a>
+          
           </li>
         </ul>
       </div>
     </div>
   </nav>
       
-<!--    <header class="w3-container w3-gray">
-      <a href='/MVC_Skeleton'>Home</a>   
-      <a href='index.php'>Home</a>
-      <a href='?controller=article&action=readAll'>Articles</a>
-      <a href='?controller=product&action=readAll'>Products</a>
-      <a href='?controller=product&action=create'>Add Article</a>
-      <a href='?controller=article&action=create'>Add Article</a>
-    </header>-->
 <div class="w3-container w3-pink">
     <?php require_once('routes.php'); ?>
 </<div>
