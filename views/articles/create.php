@@ -1,10 +1,10 @@
-
+<!--comment-->
 <head>
   <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
   <script>tinymce.init({
       selector:'textarea',
       plugins: 'link autoresize',  
-      menubar:false
+      menubar:false 
   });</script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
