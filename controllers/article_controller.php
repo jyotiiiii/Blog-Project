@@ -30,7 +30,7 @@ class ArticleController {
           require_once('views/articles/create.php');
       }
       else { 
-          Article::upload();  
+         // Article::upload($headline);  
           Article::add();
              
             $articles = Article::all(); //$products is used within the view

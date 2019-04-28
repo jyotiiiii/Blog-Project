@@ -107,15 +107,15 @@ $req->execute();
 
 //upload article image if it exists
         if (!empty($_FILES[self::InputKey]['name'])) {
-		Article::uploadFile($name);
+		Article::uploadFile($headline);
 	}
 
     }
     
     public static function add() {
-    if($_FILES){
-        Article::upload();
-    }
+    /*if($_FILES){
+        Article::upload($headline);
+    }*/
     $db = Db::getInstance();
     $req = $db->prepare("Insert into article(headline, text, blogger_id, description) values (:headline, :text, :blogger_id, :description)");
     //$req->bindParam(':id', $id);
@@ -150,11 +150,12 @@ $description = $filteredDescription;
 $req->execute();
 
 //upload article image
-//Article::upload($name);
+Article::upload($headline);
     }
 
-const AllowedTypes = ['image/jpeg', 'image/jpg'. 'image/png'];
-const InputKey = 'myUploader';
+//SWITCH or Victoria's or try-catch?     
+//const AllowedTypes = ['image/jpeg', 'image/jpg'. 'image/png'];
+//const InputKey = 'myUploader';
 
 
 
@@ -198,32 +199,44 @@ public static function remove($id) {
       // the query was prepared, now replace :id with the actual $id value
       $req->execute(array('id' => $id));
   }
-public static function upload() {
-        if ($_FILES) {
-          $name= $_FILES['myUploader']['name'];
-          switch($_FILES['myUploader']['type'])
+public static function upload($headline) {
+        if ($_FILES) 
+        {
+            switch($_FILES['myUploader']['type'])
           {
            case 'image/jpg'  : $ext = 'jpg'; break;
            case 'image/jpeg' : $ext = 'jpeg'; break;
            case 'image/gif'  : $ext = 'gif'; break;
            case 'image/png'  : $ext = 'png'; break;
-           default:            $ext = '';    break;
+           case 'image/svg'  : $ext = 'svg'; break;
+           default:            $ext = '';    break; 
+       
           }
+            if($ext) {
+            $tmpImage = addslashes(file_get_contents($_FILES['myUploader']['tmp_name'])); 
+            $path="/Applications/XAMPP/xamppfiles/htdocs/Blog-Project/views/images/";
+            $name= $headline . ".jpeg";
+            //$imageName = $path . $headline . ".jpeg";
+            move_uploaded_file($_FILES['myUploader']['tmp_name'],$path . $name);
+            //$name= $_FILES['myUploader']['name'];
+            $db = Db::getInstance();
+            $sql="INSERT INTO image VALUES('','$name','$path')";
+            $db->query($sql) or die($db->error);
           
-        if($ext)
-        {
-          echo getcwd();
-          $imageName = "image.$ext";  
-          move_uploaded_file($_FILES['myUploader']['tmp_name'], $imageName);           
-        } else {
-          echo "'$name' . is not accepted.";  
+            } else {
+                echo $_FILES['myUploader']['name'] . "is not accepted.";  
+            } 
+        
         }
+            else {
+                echo "No image has been uploaded.";
+            }
           
-        } else {
-            echo "No image has been uploaded.";
-        }
-    }  
+        
+        
+        }  
   
   
-}
+    }
+
 ?>
