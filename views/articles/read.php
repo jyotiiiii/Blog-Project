@@ -4,8 +4,9 @@
 <!--<p>Article ID: <?php // echo $article->id; ?></p>-->
 <p> <?php echo $article->headline; ?></p>
 
-<?php 
-$file = 'image.jpeg';
+<?php
+
+$file ='views/images/' . $article->headline . '.jpeg';
 if(file_exists($file)){
     $img = "<img src='$file' width='150' />";
     echo $img;
@@ -13,7 +14,7 @@ if(file_exists($file)){
 else
 {
 echo "<img src='views/images/standard/_noproductimage.png' width='150' />";
-} 
+}
 
 ?>
 <?php
