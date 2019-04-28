@@ -1,19 +1,25 @@
 <!DOCTYPE html>
+
 <?php
 // Initialize the session
 session_start();
- 
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: index.php");
-  exit;
+
+if ( isset( $_SESSION['$username'] ) ) {
+    header("Location:homePage.php");
+
 }
+    // Grab user data from the database using the blogger_id
+    // Let them access the "logged in only" pages
+
+    // Redirect them to the login page
+    
+
 // Include config file
 require_once('routes.php');
 require_once('connection.php');
 ?>
 
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -39,13 +45,12 @@ require_once('connection.php');
                     <input type="password" class="form-control" id="password" name="password" />
                 </div>
 <!--               <input id="login" type="button" value="login" onclick="authlogin();" />-->
-                <a href='?controller=login&action=authlogin'>Login</a>
+                <a href='?controller=pages&action=authlogin'>Login</a>
             </form>
          
         </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
-        </form>
-    </div>    
+            <p>Don't have an account? <a href="Register.php">Sign up now</a>.</p>
+        
+    
 </body>
 </html>
-
