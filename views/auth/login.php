@@ -4,13 +4,24 @@
 session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-  header("location: index.php");
-  exit;
-}
+if(isset($_SESSION["email"]))
+                {
+                $query = "SELECT first_name FROM blogger WHERE email = '$_SESSION[email]'";
+                $statement = $connect->prepare($query);
+                $statement->execute();
+                $firstName = $statement->fetch();
+                echo "<h3>Hi $firstName[first_name]</h3>";
+                $logout = '<br /><br /><a href="logout.php">Logout</a>';
+                }
+                else
+                {
+                header("location:auth/login.php");
+                }
+                ?>
 // Include config file
-require_once('routes.php');
 require_once('connection.php');
+require_once('routes.php');
+
 ?>
 
 <html lang="en">
@@ -28,7 +39,7 @@ require_once('connection.php');
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
         
-        <form class="username" method="post">
+        <form class="user" method="post" name="user">
             
             <div class="form-group">
                     <label for="username">Username</label>
@@ -38,12 +49,12 @@ require_once('connection.php');
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" name="password" />
                 </div>
-<!--               <input id="login" type="button" value="login" onclick="authlogin();" />-->
-                <a href='?controller=login&action=authlogin'>Login</a>
+               <!--<input id="login" type="button" value="login" onclick="authlogin();" />-->
+                <a href='?controller=auth&action=login'>Login</a>
             </form>
          
         </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+            <p>Don't have an account? <a href="index.php?controller=pages&action=register">Sign up now</a>.</p>
         </form>
     </div>    
 </body>

@@ -1,7 +1,7 @@
 <?php
 
  
-class authenticate{
+class Authenticate{
    
         // we define 3 attributes
     public $blogger_id;
@@ -16,27 +16,36 @@ class authenticate{
     }
 
     public function authlogin() {
-        $db = Db::getInstance();
         
-        if(!empty($_POST)){
-                    $username = $_POST['username'];
-                    $password = $_POST['password'];
-                    
-                  
-                         $sql =$db->prepare("SELECT username, password FROM blogger WHERE 'username'= ? AND 'password' =MD5(?)");
-                        
-                         $req->execute($sql);
-                         $authenticate = $req->fetch([$username, $password]); 
-                         
-                         if ($authenticate) {
-                        header('Location: index.php');
+        session_start();
+
+        try {
+            $db = Db::getInstance();
+            if (isset($_POST["user"])) {
+                if (empty($_POST["username"]) || empty($_POST["password"])) {
+                    $message = '<label>All fields are required</label>';
+                } else {
+                    $query = "SELECT * FROM blogger WHERE email = :email AND password = :password";
+                    $statement = $connect->prepare($query);
+                    $statement->execute(
+                            array(
+                                'email' => filter_input(INPUT_POST, "email"),
+                                'password' => filter_input(INPUT_POST, "password")
+                            )
+                    );
+                    $count = $statement->rowCount();
+                    if ($count > 0) {
+                        $_SESSION["email"] = filter_input(INPUT_POST, 'email');
+                        header("location:auth/userHome.php");
                     } else {
-                        header('Location: error.php');
+                        $message = '<label>Wrong email/password combination </label>';
                     }
-                
-                $db = null;
-            } 
-    }
+                }
+            }
+        } catch (PDOException $error) {
+            $message = $error->getMessage();
+        }
+        
         
         
     public function newRegister() {
@@ -67,33 +76,7 @@ class authenticate{
                 }   catch (Exception $ex) {
                         $ex->getMessage();
                         exit("Something went wrong!");
-                    }   
-                
-    
-                   
+                    }                
     }        
 }
 
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

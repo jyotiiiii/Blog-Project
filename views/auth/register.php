@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+session_start();<!DOCTYPE html>
 
 <?php
 
@@ -45,11 +45,11 @@ require_once('connection.php');
                 </div>
               
                 <div class="form-group">
-                 <a href='?controller=login&action=newRegister'>Register</a>    
+                 <a href='?controller=auth&action=newRegister'>Register</a>    
                 
             
             </div>
-            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+            <p>Already have an account? <a href="index.php?controller=pages&action=login">Login here</a>.</p>
         </form>
     </div>    
 </body>
