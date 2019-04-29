@@ -16,32 +16,5 @@ class PagesController {
     public function about() {
       require_once('views/pages/AboutUsPage.php');
     }
+}
 
-    public function login() {
-        if ($_SERVER['REQUEST_METHOD']=='GET'){
-      require_once('views/auth/login.php');
-    }else 
-         $user = Authenticate::authlogin();
-      
-        require_once('views/auth/login.php');
-        }
-
-    
-        public function register() {
-        
-      if ($_SERVER['REQUEST_METHOD']=='GET'){
-      require_once('views/auth/register.php');
-      }else { 
-         $user = Authenticate::newRegister();
-      
-        require_once('views/auth/register.php');
-        }
-      
-    }
-     
-    public function logout(){
-    session_start();
-    session_destroy();
-    }    
-
-    }

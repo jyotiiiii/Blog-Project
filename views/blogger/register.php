@@ -1,17 +1,9 @@
-session_start();<!DOCTYPE html>
-
-<?php
-
-// Include config file
-require_once('routes.php');
-require_once('connection.php');
-?>
-
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>Register</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
@@ -20,9 +12,9 @@ require_once('connection.php');
 </head>
 <body>
     <div class="wrapper">
-        <h2>Sign Up</h2>
+        <h2>Register</h2>
         <p>Please fill this form to create an account.</p>
-        <form class="registration" method="post">
+        <form class="registration" method="post" action="index.php?controller=blogger&action=register">
           
                 <div class="form-group">
                     <label for="first_name">First Name</label>
@@ -45,12 +37,14 @@ require_once('connection.php');
                 </div>
               
                 <div class="form-group">
-                 <a href='?controller=auth&action=newRegister'>Register</a>    
+                <input id="login" type="submit" value="Submit" />
+            </div>
+        </form>   
                 
             
-            </div>
-            <p>Already have an account? <a href="index.php?controller=pages&action=login">Login here</a>.</p>
-        </form>
+            
+            <p>Already have an account? <a href="index.php?controller=blogger&action=login">Login here</a>.</p>
+
     </div>    
 </body>
 </html>
