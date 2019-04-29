@@ -29,37 +29,37 @@ and open the template in the editor.
     
     
     <div class="column">
-        <img src="images/UNP_39609_Lloyds_Omolade Ojo004.png" alt="omo" style="width:50%">
+        <img src="views/images/omo.png" alt="omo" style="width:20%">
         <p>Hi Everyone! I’m Omo and I love theatre, food and reading.</p>
     </div>
     
     
     <div class="column">
-        <img src="images/gabby.png" alt="gaby" style="width:50%">
+        <img src="views/images/gabby.png" alt="gaby" style="width:20%">
         <p>I'm Gabriella, an English student at the University of Sussex. My writing engages with the cultural, historical, creative, performed, theoretical, and linguistic aspects of English as a world language and literature. Join me on a bold journey to reach a new level of understanding.</p>
     </div>
     
     
     <div class="column">
-        <img src="images/mona.png" alt="mona" style="width:50%">
+        <img src="views/images/mona.png" alt="mona" style="width:20%">
         <p> I am Mona, an Accountant by profession and a cook by passion. I am a dreamer, food enthusiast and a mother of two beautiful boys! Born in an Indian family of connoisseurs, experimenting with spices is embedded in my genes but my family’s love for new dishes has made me explore for recipes from around the world. My recipes are tried and tested in my kitchen, reflecting my life and my roots. Explore the world of Spices, Flavours, Gastronomy and much more along with me as I discover new recipes and global flavours.</p>
     </div>
     
     
     <div class="column">
-         <img src="images/jyoti.png" alt="jyoti" style="width:50%">
+         <img src="views/images/jyoti.png" alt="jyoti" style="width:20%">
          <p>Jyoti is a very creative person with excellence in styling and making things look pretty. She is an amazing mum to a beautiful girl and an expert in multitasking.  </p>  
     </div>
     
     
      <div class="column">
-         <img src="images/niki.png" alt="niki" style="width:50%">
+         <img src="views/images/niki.png" alt="niki" style="width:20%">
          <p> Hi. I’m Niki, and I welcome you in this corner of the internet where I share the practical methods I have developed in the past few years to create a life that I like living without compromising my introvert self. Join me on my journey to find creative and practical solutions for everyday problems like planning, procrastination, overwhelm and much more. </p>
     </div>
     
     
      <div class="column">
-         <img src="images/najwa.png" alt="najwa" style="width:50%">
+         <img src="views/images/najwa.png" alt="najwa" style="width:20%">
          <p>Najwa is a very happy and cheerful girl. She is second name to fashion and styling, with immense knowledge of latest trends, colour schemes and travel. She is well travelled and is an expert in designer brands.</p>
     </div>
 </div>
