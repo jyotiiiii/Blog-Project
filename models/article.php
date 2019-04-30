@@ -107,7 +107,7 @@ $req->execute();
 
 //upload article image if it exists
         if (!empty($_FILES[self::InputKey]['name'])) {
-		Article::uploadFile($headline);
+		Article::upload($headline);    //it used to be uploadFile
 	}
 
     }
@@ -155,7 +155,7 @@ Article::upload($headline);
 
 //SWITCH or Victoria's or try-catch?     
 //const AllowedTypes = ['image/jpeg', 'image/jpg'. 'image/png'];
-//const InputKey = 'myUploader';
+const InputKey = 'myUploader';
 
 
 
@@ -214,7 +214,7 @@ public static function upload($headline) {
           }
             if($ext) {
             $tmpImage = addslashes(file_get_contents($_FILES['myUploader']['tmp_name'])); 
-            $path="/Applications/XAMPP/xamppfiles/htdocs/Blog-Project/Blog-Project/Blog-Project/views/images/";
+            $path="/Applications/XAMPP/xamppfiles/htdocs/Blog-Project/views/images/";
             $name= $headline . ".jpeg";
             //$imageName = $path . $headline . ".jpeg";
             move_uploaded_file($_FILES['myUploader']['tmp_name'],$path . $name);
