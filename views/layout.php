@@ -67,7 +67,7 @@ session_start();
 
          <div class="social-icons clearfix"> 
              
-          <a class="social-icon-youtube"><a href="https://www.youtube.com/?gl=GB&hl=en-GB" title="Subscribe to our channel on YouTube" target="_blank"><img src="https://i.imgur.com/DIWfuNh.png" title="source: imgur.com" alt="YouTube" height="115px" width="100px"></a>
+          <a class="social-icon-youtube"><a href="https://www.youtube.com/channel/UCVLlebmzAKL8tWlmMPDj-Dg?view_as=subscriber" title="Subscribe to our channel on YouTube" target="_blank"><img src="https://i.imgur.com/DIWfuNh.png" title="source: imgur.com" alt="YouTube" height="115px" width="100px"></a>
                   
                   
           <a class="social-icon-instagram"><a href="https://www.instagram.com/honeycombbees1/" title="Follow us on Instagram" target="_blank"><img src="https://i.imgur.com/GSAbeBQ.png" title="source: imgur.com" alt="Instagram"height="115px" width="100px"></a>
@@ -82,7 +82,7 @@ session_start();
           <a class="social-icon-twitter"><a href="https://twitter.com/BeesHoneycomb" title="Follow us on Twitter" target="_blank"><img src="https://i.imgur.com/u7Ptk9j.png" title="source: imgur.com" alt="Twitter"height="115px" width="100px"></a>
                   
                   
-          <a class="social-icon-facebook"><a href="https://www.facebook.com/gabby.luck" title="Like us on Facebook" target="_blank"><img src="https://i.imgur.com/io0P9Q0.png" title="source: imgur.com" alt="facebook" height="115px" width="100px"></a>
+          <a class="social-icon-facebook"><a href="https://www.facebook.com/honeycomb.bees.35" title="Like us on Facebook" target="_blank"><img src="https://i.imgur.com/io0P9Q0.png" title="source: imgur.com" alt="facebook" height="115px" width="100px"></a>
                   </div>
                   <p>©<?= date('Y'); ?> HoneyComb</p>  
       </div>
