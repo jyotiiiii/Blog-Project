@@ -147,7 +147,7 @@ $blogger_id = $filteredBlogger_ID;
 $headline = $filteredHeadline;
 $text = $filteredText;
 $description = $filteredDescription;
-$req->execute();
+//$req->execute();
 
 //upload article image
 Article::upload($headline);
@@ -214,7 +214,7 @@ public static function upload($headline) {
           }
             if($ext) {
             $tmpImage = addslashes(file_get_contents($_FILES['myUploader']['tmp_name'])); 
-            $path="/Applications/XAMPP/xamppfiles/htdocs/Blog-Project/views/images/";
+            $path="/Applications/XAMPP/xamppfiles/htdocs/Blog-Project/Blog-Project/Blog-Project/views/images/";
             $name= $headline . ".jpeg";
             //$imageName = $path . $headline . ".jpeg";
             move_uploaded_file($_FILES['myUploader']['tmp_name'],$path . $name);
