@@ -19,53 +19,41 @@ session_start();
   
 
   <body>
+<!--This is our header-->
+<div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+           <!-- <a class="text-muted" href="#">Subscribe</a>-->
+          </div>
+          <div class="col-4 text-center">
+            <h1 class="blog-header-logo display-3 text-dark" href="#">Honeycomb</h1>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="#">
+             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+            </a>
+          </div>
+        </div>
+      </header>
 
-      
-      <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <!--<a class="navbar-brand" href="index.html">Start Bootstrap</a>-->
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="?controller=article&action=readAll">Articles</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?controller=product&action=readAll">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?controller=product&action=create">Add Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?controller=article&action=create">Add Article</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?controller=pages&action=about">About Us</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="?controller=blogger&action=login">Login</a>
-          
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="?controller=blogger&action=register">Register</a>
-          
-          </li>
-        </ul>
+      <!-- Navigation-->
+<div class="container">
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+            
+          <a href=""><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>          <a class="p-2 text-muted" href="#">About Us</a>
+          <a class="p-2 text-muted" href="?controller=product&action=readAll">Products</a>
+          <a class="p-2 text-muted" href="?controller=product&action=create">Add Product</a>
+          <a class="p-2 text-muted" href="?controller=article&action=readAll">Articles</a>
+          <a class="p-2 text-muted" href="?controller=article&action=create">Add Article</a>
+          <a class="p-2 text-muted" href="#">Contact Us</a>
+          <a class="p-2 text-muted" href="?controller=pages&action=about">About Us</a>
+          <a class="p-2 text-muted" href="?controller=blogger&action=register">Register</a>
+          <a class="p-2 text-muted" href="?controller=blogger&action=login">Login</a>
+        </nav>
       </div>
-    </div>
-  </nav>
-        
-        
-      
-
+</div>
       
       
       
@@ -80,24 +68,25 @@ session_start();
 
          <div class="social-icons clearfix"> 
              
-          <a class="social-icon-youtube"><a href="https://www.youtube.com/channel/UCVLlebmzAKL8tWlmMPDj-Dg?view_as=subscriber" title="Subscribe to our channel on YouTube" target="_blank"><img src="https://i.imgur.com/DIWfuNh.png" title="source: imgur.com" alt="YouTube" height="115px" width="100px"></a>
+          <a class="social-icon-youtube"><a href="https://www.youtube.com/channel/UCVLlebmzAKL8tWlmMPDj-Dg?view_as=subscriber" title="Subscribe to our channel on YouTube" target="_blank"><img src="https://i.imgur.com/DIWfuNh.png" title="source: imgur.com" alt="YouTube" height="100px" width="87px"></a>
                   
                   
-          <a class="social-icon-instagram"><a href="https://www.instagram.com/honeycombbees1/" title="Follow us on Instagram" target="_blank"><img src="https://i.imgur.com/GSAbeBQ.png" title="source: imgur.com" alt="Instagram"height="115px" width="100px"></a>
+          <a class="social-icon-instagram"><a href="https://www.instagram.com/honeycombbees1/" title="Follow us on Instagram" target="_blank"><img src="https://i.imgur.com/GSAbeBQ.png" title="source: imgur.com" alt="Instagram"height="100px" width="87px"></a>
                   
                   
-          <a class="social-icon-pinterest"><a href="https://www.pinterest.co.uk/honeycombbees/" title="Take a look at our lastest pins" target="_blank"><img src="https://i.imgur.com/dJwcBpQ.png" title="source: imgur.com" alt="Pinterest"height="115px" width="100px"></a>
+          <a class="social-icon-pinterest"><a href="https://www.pinterest.co.uk/honeycombbees/" title="Take a look at our lastest pins" target="_blank"><img src="https://i.imgur.com/dJwcBpQ.png" title="source: imgur.com" alt="Pinterest"height="100px" width="87px"></a>
                   
                   
-          <a class="social-icon-github"><a href="https://github.com/jyotiiiii/Blog-Project" title="Take a look at our code" target="_blank"><img src="https://i.imgur.com/GvE3sbj.png" title="source: imgur.com" alt="GitHub"height="115px" width="100px"></a>
+          <a class="social-icon-github"><a href="https://github.com/jyotiiiii/Blog-Project" title="Take a look at our code" target="_blank"><img src="https://i.imgur.com/GvE3sbj.png" title="source: imgur.com" alt="GitHub"height="100px" width="87px"></a>
                   
                   
-          <a class="social-icon-twitter"><a href="https://twitter.com/BeesHoneycomb" title="Follow us on Twitter" target="_blank"><img src="https://i.imgur.com/u7Ptk9j.png" title="source: imgur.com" alt="Twitter"height="115px" width="100px"></a>
+          <a class="social-icon-twitter"><a href="https://twitter.com/BeesHoneycomb" title="Follow us on Twitter" target="_blank"><img src="https://i.imgur.com/u7Ptk9j.png" title="source: imgur.com" alt="Twitter"height="100px" width="87px"></a>
                   
                   
-          <a class="social-icon-facebook"><a href="https://www.facebook.com/honeycomb.bees.35" title="Like us on Facebook" target="_blank"><img src="https://i.imgur.com/io0P9Q0.png" title="source: imgur.com" alt="facebook" height="115px" width="100px"></a>
+          <a class="social-icon-facebook"><a href="https://www.facebook.com/honeycomb.bees.35" title="Like us on Facebook" target="_blank"><img src="https://i.imgur.com/io0P9Q0.png" title="source: imgur.com" alt="facebook" height="100px" width="87px"></a>
                   </div>
-                  <p>©<?= date('Y'); ?> HoneyComb</p>  
+          <div class="">
+                  <p>©<?= date('Y'); ?> Honeycomb</p>  
       </div>
  
     </footer>
