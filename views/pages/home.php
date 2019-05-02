@@ -6,7 +6,7 @@
            <!-- <a class="text-muted" href="#">Subscribe</a>-->
           </div>
           <div class="col-4 text-center">
-            <a class="blog-header-logo text-dark" href="#">HoneyComb</a>
+            <h1 class="blog-header-logo display-3 text-dark" href="#">Honeycomb</h1>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#">
@@ -15,28 +15,31 @@
           </div>
         </div>
       </header>
+</div>    
 <!-- Navigation-->
+<div class="container">
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-          <a class="p-2 text-muted" href="#"></a>
           <a class="p-2 text-muted" href="#">About Us</a>
           <a class="p-2 text-muted" href="#">Contact Us</a>
           <a class="p-2 text-muted" href="#">Newsletter</a>
        
         </nav>
       </div>
+
 <!-- Blog Posts and Images-->
-      <div class="jumbotron p-3 p-md-5 text-white rounded bg-grey">
-        <div class="col-md-6 px-0">
+
+      <div class="jumbotron p-3 p-md-5 text-white rounded bg-light text-center">
+        <div class="col-md-12 px-0">
          <!-- <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
           <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
           <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>-->
            <div class="social-icons clearfix"> 
              
-          <a class="social-icon-youtube"><a href="https://www.youtube.com/channel/UCVLlebmzAKL8tWlmMPDj-Dg?view_as=subscriber" title="Subscribe to our channel on YouTube" target="_blank"><img src="https://i.imgur.com/DIWfuNh.png" title="source: imgur.com" alt="YouTube" height="115px" width="100px"></a>
+          <a class=""><a href="https://www.youtube.com/channel/UCVLlebmzAKL8tWlmMPDj-Dg?view_as=subscriber" title="Subscribe to our channel on YouTube" target="_blank"><img src="https://i.imgur.com/DIWfuNh.png" title="source: imgur.com" alt="YouTube" height="115px" width="100px"></a>
                   
                   
-          <a class="social-icon-instagram"><a href="https://www.instagram.com/honeycombbees1/" title="Follow us on Instagram" target="_blank"><img src="https://i.imgur.com/GSAbeBQ.png" title="source: imgur.com" alt="Instagram"height="115px" width="100px"></a>
+          <a class=""><a href=""><img src="https://i.imgur.com/5LVRHtR.png" title="FASHION" height="173px" width="150px"/></a> 
                   
                   
           <a class="social-icon-pinterest"><a href="https://www.pinterest.co.uk/honeycombbees/" title="Take a look at our lastest pins" target="_blank"><img src="https://i.imgur.com/dJwcBpQ.png" title="source: imgur.com" alt="Pinterest" height="115px" width="100px"></a>
@@ -153,4 +156,4 @@
         </div>
       </div>
     </div>
- 
+</div>

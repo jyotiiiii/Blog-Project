@@ -14,8 +14,14 @@ session_start();
   <a href="../favicon.ico"></a>
 <title>Honeycomb</title>
   </head>
+  
+  
+  
+
   <body>
-        <!-- Navigation -->
+
+      
+      <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <!--<a class="navbar-brand" href="index.html">Start Bootstrap</a>-->
@@ -56,6 +62,13 @@ session_start();
       </div>
     </div>
   </nav>
+        
+        
+      
+
+      
+      
+      
       
 <div class="w3-container w3-pink">
     <?php require_once('routes.php'); ?>
