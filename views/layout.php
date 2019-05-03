@@ -46,8 +46,10 @@ session_start();
           <a class="p-2 text-muted" href="?controller=article&action=create">Add Article</a>
           <a class="p-2 text-muted" href="#">Contact Us</a>
           <a class="p-2 text-muted" href="?controller=pages&action=about">About Us</a>
-          <a class="p-2 text-muted" href="?controller=blogger&action=register">Register</a>
-          <a class="p-2 text-muted" href="?controller=blogger&action=login">Login</a>
+        
+          <!-- the two line below can now be deleted as we now have the login in the H of honeycomb-->
+          <!-- <a class="p-2 text-muted" href="?controller=blogger&action=register">Register</a>
+          <a class="p-2 text-muted" href="?controller=blogger&action=login">Login</a>-->
         </nav>
       </div>
 </div>
@@ -83,11 +85,12 @@ session_start();
                   
                   
           <a class="social-icon-facebook"><a href="https://www.facebook.com/honeycomb.bees.35" title="Like us on Facebook" target="_blank"><img src="https://i.imgur.com/io0P9Q0.png" title="source: imgur.com" alt="facebook" height="100px" width="87px"></a>
-        </div>
-          
-          <div>
-              <span class="align-text-bottom"><br>©<?= date('Y'); ?> Honeycomb</span>
-          </div>
+
+                  </div>
+          <div class="" style="color-muted">
+              <p><br>©<?= date('Y'); ?><a href="?controller=blogger&action=login" style="text-decoration: none"> H</a>oneycomb</p>
+                  
+
       </div>
     </footer>
 
