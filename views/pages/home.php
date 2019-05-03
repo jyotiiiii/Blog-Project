@@ -20,11 +20,10 @@
                   
           <a class=""><a href=""><img src="https://i.imgur.com/5LVRHtR.png" title="FASHION" height="173px" width="150px"/></a>                   
                   
-          <!--<a class=""><a href=""><img src="https://i.imgur.com/5LVRHtR.png" title="FASHION" height="173px" width="150px"/></a>-->                   
-                  
           <a class=""><a href=""><img src="https://i.imgur.com/5LVRHtR.png" title="FASHION" height="173px" width="150px"/></a>                   
                   
-          <a class=""><a href=""><img src="https://i.imgur.com/5LVRHtR.png" title="FASHION" height="173px" width="150px"/></a>                   </div>
+          <a class=""><a href=""><img src="https://i.imgur.com/5LVRHtR.png" title="FASHION" height="173px" width="150px"/></a>                   
+        </div>
         </div>
       </div>
 

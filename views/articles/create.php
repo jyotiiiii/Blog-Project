@@ -1,5 +1,4 @@
-
-<head>
+<!--<head>
   <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
   <script>tinymce.init({
       selector:'textarea',
@@ -11,7 +10,7 @@
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-</head>
+</head>-->
 <body>
     
 <div class="wrapper">

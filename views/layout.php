@@ -15,19 +15,16 @@ session_start();
 <title>Honeycomb</title>
   </head>
   
-  
-  
-
   <body>
 <!--This is our header-->
 <div class="container">
       <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="row flex-nowrap justify-content-between align-items-center text-center">
           <div class="col-4 pt-1">
            <!-- <a class="text-muted" href="#">Subscribe</a>-->
           </div>
           <div class="col-4 text-center">
-            <h1 class="blog-header-logo display-3 text-dark" href="#">Honeycomb</h1>
+              <a class="blog-header-logo display-3 text-dark" href="index.php" style="text-decoration: none">Honeycomb</a>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#">
@@ -41,8 +38,8 @@ session_start();
 <div class="container">
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-            
-          <a href=""><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>          <a class="p-2 text-muted" href="#">About Us</a>
+          <a href=""><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>
+          <a class="p-2 text-muted" href="index.php">Home</a>
           <a class="p-2 text-muted" href="?controller=product&action=readAll">Products</a>
           <a class="p-2 text-muted" href="?controller=product&action=create">Add Product</a>
           <a class="p-2 text-muted" href="?controller=article&action=readAll">Articles</a>
@@ -58,15 +55,17 @@ session_start();
       
       
       
-<div class="w3-container w3-pink">
+<div class="">
     <?php require_once('routes.php'); ?>
-</<div>
-<div class="w3-container w3-gray">
-    <footer >
-       <div >
+</div>
+
+    </body>
+    
+    <footer>
+      
       <div style="text-align:center" class="footer-main bg-light py-5 small" class="container">
 
-         <div class="social-icons clearfix"> 
+        <div class="social-icons clearfix"> 
              
           <a class="social-icon-youtube"><a href="https://www.youtube.com/channel/UCVLlebmzAKL8tWlmMPDj-Dg?view_as=subscriber" title="Subscribe to our channel on YouTube" target="_blank"><img src="https://i.imgur.com/DIWfuNh.png" title="source: imgur.com" alt="YouTube" height="100px" width="87px"></a>
                   
@@ -84,12 +83,14 @@ session_start();
                   
                   
           <a class="social-icon-facebook"><a href="https://www.facebook.com/honeycomb.bees.35" title="Like us on Facebook" target="_blank"><img src="https://i.imgur.com/io0P9Q0.png" title="source: imgur.com" alt="facebook" height="100px" width="87px"></a>
-                  </div>
-          <div class="">
-                  <p>©<?= date('Y'); ?> Honeycomb</p>  
+        </div>
+          
+          <div>
+              <span class="align-text-bottom"><br>©<?= date('Y'); ?> Honeycomb</span>
+          </div>
       </div>
- 
     </footer>
+
 </div>
-  </body>
+  
 </html> 

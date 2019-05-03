@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<!--<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
@@ -9,10 +9,10 @@
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-</head>
+</head>-->
 <body>
     <div class="wrapper">
-        <h2>Register</h2>
+        <h2 class="display-4">Register</h2>
         <p>Please fill this form to create an account.</p>
         <form class="registration" method="post" action="index.php?controller=blogger&action=register">
           

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -9,10 +9,10 @@
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
     </style>
-</head>
-<body>
-    <div class="wrapper">
-        <h2>Login</h2>
+</head>-->
+<!--<body>
+    <div class="wrapper">-->
+        <h2 class="display-4">Login</h2>
         <p>Please fill in your credentials to login.</p>
         
         <form class="user" method="post" name="user" action="index.php?controller=blogger&action=login">

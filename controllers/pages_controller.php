@@ -14,7 +14,7 @@ class PagesController {
     }
     
     public function about() {
-      require_once('views/pages/AboutUsPage.php');
+      require_once('views/pages/about.php');
     }
 }
 

@@ -1,6 +1,5 @@
-<!--
---><head><!--
--->  <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
+<!--<head>
+  <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
@@ -15,9 +14,9 @@ tinymce.init({ selector: "#text",
       menubar:false});
 
 </script>
- <!--
+ 
 <script>tinymce.init({selector:'textarea'});</script>
---></head><!--
+</head>
 <body>-->
  
 
