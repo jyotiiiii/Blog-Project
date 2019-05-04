@@ -86,12 +86,11 @@ session_start();
                   
           <a class="social-icon-facebook"><a href="https://www.facebook.com/honeycomb.bees.35" title="Like us on Facebook" target="_blank"><img src="https://i.imgur.com/io0P9Q0.png" title="source: imgur.com" alt="facebook" height="100px" width="87px"></a>
 
-                  </div>
-          <div class="" style="color-muted">
-              <p><br>©<?= date('Y'); ?><a href="?controller=blogger&action=login" style="text-decoration: none"> H</a>oneycomb</p>
+          <p class="text-muted"><br>©<?= date('Y'); ?><a href="?controller=blogger&action=login" style="text-decoration: none" style="color: black" class="text-muted"> H</a>oneycomb</p>
                   
 
-      </div>
+          </div>
+      </div>  
     </footer>
 
 </div>
