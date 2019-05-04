@@ -1,7 +1,3 @@
-
-
-
-
 <!-- Blog Posts and Images-->
 
       <div class="jumbotron p-3 p-md-5 text-white rounded bg-light text-center">

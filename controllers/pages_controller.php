@@ -16,5 +16,8 @@ class PagesController {
     public function about() {
       require_once('views/pages/about.php');
     }
+      public function responsibility() {
+      require_once('views/pages/responsibility.php');
+    }
 }
 
