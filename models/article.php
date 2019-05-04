@@ -1,4 +1,5 @@
 <?php
+
   class Article {
 
     // we define 3 attributes
@@ -6,10 +7,10 @@
     public $blogger_id;
     public $headline;
     public $text;
-    public $description;
+  public $description; 
 //    public $blogger_name; //concat first_name . last_name
 
-      public function __construct($id, $blogger_id, $headline, $text, $description) {
+      public function __construct($id, $blogger_id, $headline, $text, $description ) {
       $this->id = $id;
       $this->blogger_id = $blogger_id;
       $this->headline = $headline;
@@ -29,6 +30,60 @@ ON blogger.blogger_id = article.blogger_id');
       }
       return $list;
     }
+   
+      public static function blogname($id) {
+      $db = Db::getInstance();
+      //use intval to make sure $id is an integer
+      $id = intval($id);
+      $req = $db->prepare('SELECT first_name FROM blogger INNER JOIN article
+ON article.blogger_id = blogger.blogger_id WHERE article.id = :id');
+      //the query was prepared, now replace :id with the actual $id value
+      $req->execute(array('id' => $id));
+      $article = $req->fetch();
+if($article){
+      return $article['first_name'];
+    }
+    else
+    {
+        //replace with a more meaningful exception
+        throw new Exception('A real exception should go here');
+    }
+    }
+    
+        public static function description($id) {
+      $db = Db::getInstance();
+      //use intval to make sure $id is an integer
+      $id = intval($id);
+      $req = $db->prepare('SELECT description FROM article WHERE id = :id');
+      //the query was prepared, now replace :id with the actual $id value
+      $req->execute(array('id' => $id));
+      $article = $req->fetch();
+if($article){
+      return $article['description'];
+    }
+    else
+    {
+        //replace with a more meaningful exception
+        throw new Exception('A real exception should go here');
+    }
+    }
+    public static function headline($id) {
+      $db = Db::getInstance();
+      //use intval to make sure $id is an integer
+      $id = intval($id);
+      $req = $db->prepare('SELECT headline FROM article WHERE id = :id');
+      //the query was prepared, now replace :id with the actual $id value
+      $req->execute(array('id' => $id));
+      $article = $req->fetch();
+if($article){
+      return $article['headline'];
+    }
+    else
+    {
+        //replace with a more meaningful exception
+        throw new Exception('A real exception should go here');
+    }
+    }
     public static function find($id) {
       $db = Db::getInstance();
       //use intval to make sure $id is an integer
@@ -47,29 +102,6 @@ if($article){
         throw new Exception('A real exception should go here');
     }
     }
-    
-//    public static function find($id) {
-//      $db = Db::getInstance();
-//      //use intval to make sure $id is an integer
-//      $id = intval($id);
-//      
-//      $req = $db->prepare("SELECT concat(blogger.first_name, ' ', blogger.last_name),
-//          article.headline, article.text
-//    FROM Article
-//    INNER JOIN blogger
-//    ON blogger.blogger_id = article.blogger_id");
-//      //the query was prepared, now replace :id with the actual $id value
-//      $req->execute(array('id' => $id));
-//      $article = $req->fetch();
-//if($article){
-//      return new Article($article['headline'], $article['first_name'], $article['text']);
-//    }
-//    else
-//    {
-//        //replace with a more meaningful exception
-//        throw new Exception('A real exception should go here');
-//    }
-//    }
 
 public static function update($id) {
     $db = Db::getInstance();
@@ -78,18 +110,10 @@ public static function update($id) {
 
 //            . "comment_id=:comment_id, "
     $req->bindParam(':id', $id);
-//    $req->bindParam(':blogger_id', $blogger_id);
-//    $req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
     $req->bindParam(':text', $text);
     $req->bindParam(':description', $description);
 
-// set name and price parameters and execute
-    
-//    JYOTI CHANGE THIS CODE
-//    if(isset($_POST['blogger_id'])&& $_POST['blogger_id']!=""){
-//        $filteredbloggerID = filter_input(INPUT_POST,'1', FILTER_SANITIZE_SPECIAL_CHARS);
-//    }
     if(isset($_POST['headline'])&& $_POST['headline']!=""){
         $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
     }
@@ -125,11 +149,7 @@ $req->execute();
     $req->bindParam(':text', $text);
     $req->bindParam(':description', $description);
 
-    //JYOTI CHANGE THIS CODE
-// set parameters and execute
-//    if(isset($_POST['id'])&& $_POST['id']!=""){
-//        $filteredArticleID = filter_input(INPUT_POST,'id', FILTER_SANITIZE_SPECIAL_CHARS);
- //   }
+    
         if(isset($_POST['blogger_id'])&& $_POST['blogger_id']!=""){
         $filteredBlogger_ID = filter_input(INPUT_POST,'blogger_id', FILTER_SANITIZE_SPECIAL_CHARS);
     }
@@ -159,38 +179,6 @@ const InputKey = 'myUploader';
 
 
 
-//die() function calls replaced with trigger_error() calls
-//replace with structured exception handling
-//public static function uploadFile(string $name) {
-//
-//	if (empty($_FILES[self::InputKey])) {
-//		//die("File Missing!");
-//                trigger_error("File Missing!");
-//	}
-//
-//	if ($_FILES[self::InputKey]['error'] > 0) {
-//		trigger_error("Handle the error! " . $_FILES[InputKey]['error']);
-//	}
-//
-//
-//	if (!in_array($_FILES[self::InputKey]['type'], self::AllowedTypes)) {
-//		trigger_error("Handle File Type Not Allowed: " . $_FILES[self::InputKey]['type']);
-//	}
-//
-//	$tempFile = $_FILES[self::InputKey]['tmp_name'];
-////        $path = "C:/xampp/htdocs/MVC_Skeleton/views/images/";
-//        $path = "C:/xampp/htdocs/Blog-Project/Blog-Project-Jyoti/views/images/";
-//	$destinationFile = $path . $name . '.jpeg';
-//
-//	if (!move_uploaded_file($tempFile, $destinationFile)) {
-//		trigger_error("Handle Error");
-//	}
-//		
-//	//Clean up the temp file
-//	if (file_exists($tempFile)) {
-//		unlink($tempFile); 
-//	}
-//}
 public static function remove($id) {
       $db = Db::getInstance();
       //make sure $id is an integer
