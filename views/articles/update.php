@@ -24,7 +24,7 @@ tinymce.init({ selector: "#text",
 <div class="wrapper">
 
 <form action="" method="POST" class="username" enctype="multipart/form-data">
-    <h2>Update your Article</h2>
+<!--    <h2>Update your Article</h2>-->
         <p>
 <!--        <input class="w3-input" type="text" name="blogger_id" value="//?= $article->blogger_id; ?>">
         <label>Blogger_id</label>-->
@@ -42,7 +42,7 @@ tinymce.init({ selector: "#text",
     <p>
         <label for="description">Preview to paragraph</label>
     <p> <em>Please enter a brief description </em> </p>
-    <input style ="width: 42em;" class="form-control" id ="description" type="text" name="description" value="<?= $article->description; ?>" >
+    <input style ="width: 42em;"  class="form-control" id="description" type="text" name="description" value="<?= $article->description; ?>" >
     </p>
    
 <!--    <p>

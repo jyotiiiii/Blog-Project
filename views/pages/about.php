@@ -102,7 +102,7 @@
                 </h3>
                 <div class="mb-1 text-muted">ID:</div>
                                 <div
-                                    <p class="card-text mb-auto"><br><br>Hi Everyone! I’m Omo and I love theatre, food and reading.<br><br><br></p>
+                                    <p class="card-text mb-auto"><br><br>Hi Everyone! I’m Omo and I love theatre, food and reading. Especially food.<br><br><br></p>
                                     <a class="text-light bg-dark" href="#">Performance Blogs</a>
                                 </div>
                                 <!--<img class="card-img-right flex-auto d-none d-lg-block" <img src="views/images/omo.png" alt="omo" style="width: 200px; height: 200px;"/></a>

@@ -64,7 +64,4 @@ class ProductController {
             $products = Product::all();
             require_once('views/products/readAll.php');
       }
-      
-    }
-  
-?>
+}
