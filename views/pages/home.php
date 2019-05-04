@@ -1,7 +1,3 @@
-
-
-
-
 <!-- Blog Posts and Images-->
 
       <div class="jumbotron p-3 p-md-5 text-black rounded bg-white text-center">
@@ -31,7 +27,7 @@
                   
           <a class=""><a href=""><img src="https://i.imgur.com/5LVRHtR.png" title="FASHION" height="173px" width="150px"/></a>                   
                   
-              <h1 class="display-4 font-italic"class="text-black">Title of a longer featured blog post</h1>
+              <h1 class="display-4 font-italic"class="text-black">Title of a featured blog post</h1>
           <p class="lead my-3"class="text-black">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
           <p class="bd-lead"class="text-black">Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.</p>
           <p class="lead mb-0"><a href="#" class="text-black font-weight-bold">Continue reading...</a></p>         

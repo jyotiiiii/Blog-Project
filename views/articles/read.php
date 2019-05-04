@@ -1,6 +1,4 @@
-<head>
-  
-</head>
+
 <!--<p>Article ID: <?php // echo $article->id; ?></p>-->
 <p> <?php echo $article->headline; ?></p>
 
