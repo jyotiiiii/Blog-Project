@@ -1,6 +1,8 @@
-<div class="col-md-12 px-0">                                        
-<div class="row mb-2">
+<div class="col-md-12 px-0">
+    
+    
 
+<div class="card-deck">
     <div class="col-md-4">
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
@@ -10,7 +12,7 @@
                     <a class="text-dark" href="#">Fashion</a>
                 </h3>
                 <div class="mb-1 text-muted">ID:</div>
-                <p class="card-text mb-auto">BONJOUR ALL, and welcome to my Fashion blog where you can see my personal style input and Tips for everyone.<br><br><br><br></p>
+                <p class="card-text mb-auto">BONJOUR ALL, and welcome to my Fashion blog where you can see my personal style input and Tips for everyone.</p>
                 <a class="text-light bg-dark" href="#">Fashion Blogs</a>
             </div>
         </div>  
@@ -26,7 +28,7 @@
                 </h3>
                 <div class="mb-1 text-muted">ID:</div>
                 <div
-                    <p class="card-text mb-auto">I am Mona, an Accountant by profession and a cook by passion.Born in an Indian family of connoisseurs, experimenting with spices is embedded in my genes.<br><br></p>
+                    <p class="card-text mb-auto">I am Mona, an Accountant by profession and a cook by passion.Born in an Indian family of connoisseurs, experimenting with spices is embedded in my genes.</p>
                     <a class="text-light bg-dark" href="#">Cooking Blogs</a>
                 </div>
                 <!--<img class="card-img-right flex-auto d-none d-lg-block"  <img src="views/images/mona.png" alt="mona" style="width: 200px; height: 200px;"/></a>
@@ -45,7 +47,7 @@
                 </h3>
                 <div class="mb-1 text-muted">ID:</div>
                     <div
-                        <p class="card-text mb-auto"> I'm Gabriella, an English student at the University of Sussex. Join me on a bold journey in a world language and literature to reach a new level of understanding.<br><br><br></p>
+                        <p class="card-text mb-auto"> I'm Gabriella, an English student at the University of Sussex. Join me on a bold journey in a world language and literature to reach a new level of understanding.</p>
                         <a class="text-light bg-dark" href="#">Literature Blogs</a>
                     </div>
                     <!--<img class="card-img-right flex-auto d-none d-lg-block" <img src="views/images/gabby.png" alt="gaby" style="width: 200px; height: 200px;"/></a>
@@ -53,7 +55,11 @@
                 </div>
             </div>
         </div>
-</div>    <div class="row mb-2">
+</div>    
+
+
+<div class="card-deck">    
+    
         <div class="col-md-4">
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
@@ -83,7 +89,7 @@
                 </h3>
                 <div class="mb-1 text-muted">ID:</div>
                             <div
-                                <p class="card-text mb-auto"><br><br>Hi I'm Jyoti, Printer, Illustrator, Digital Designer and Mum.<br><br><br></p>
+                                <p class="card-text mb-auto">Hi I'm Jyoti, Printer, Illustrator, Digital Designer and Mum.</p>
                                 <a class="text-light bg-dark" href="#">Making Blogs</a>
                             </div>
                             <!--<img class="card-img-right flex-auto d-none d-lg-block"  <img src="views/images/jyoti.png" alt="jyoti" style="width: 200px; height: 200px;"/></a>
@@ -102,7 +108,7 @@
                 </h3>
                 <div class="mb-1 text-muted">ID:</div>
                                 <div
-                                    <p class="card-text mb-auto"><br><br>Hi Everyone! I’m Omo and I love theatre, food and reading.<br><br><br></p>
+                                    <p class="card-text mb-auto">Hi Everyone! I’m Omo and I love theatre, food and reading.</p>
                                     <a class="text-light bg-dark" href="#">Performance Blogs</a>
                                 </div>
                                 <!--<img class="card-img-right flex-auto d-none d-lg-block" <img src="views/images/omo.png" alt="omo" style="width: 200px; height: 200px;"/></a>
@@ -112,4 +118,5 @@
                         </div>
                     </div>
                 </div>
-            </div>
+
+    </div>

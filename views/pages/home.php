@@ -4,11 +4,9 @@
 
 <!-- Blog Posts and Images-->
 
-      <div class="jumbotron p-3 p-md-5 text-white rounded bg-white text-center">
+      <div class="jumbotron p-3 p-md-5 text-black rounded bg-white text-center">
         <div class="col-md-12 px-0">
-         <!-- <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-          <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
-          <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>-->
+         
            <div class="social-icons clearfix"> 
                
 <!--Inline javascript mouseover-->  
@@ -33,7 +31,10 @@
                   
           <a class=""><a href=""><img src="https://i.imgur.com/5LVRHtR.png" title="FASHION" height="173px" width="150px"/></a>                   
                   
-                      
+              <h1 class="display-4 font-italic"class="text-black">Title of a longer featured blog post</h1>
+          <p class="lead my-3"class="text-black">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+          <p class="bd-lead"class="text-black">Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.</p>
+          <p class="lead mb-0"><a href="#" class="text-black font-weight-bold">Continue reading...</a></p>         
                   
         </div>
         </div>
@@ -66,7 +67,7 @@
               <p class="card-text mb-auto">This is where the leading goes.</p>
               <a class="text-light bg-dark" href="#">VIEW BLOG</a>
             </div>
-              <img class="card-img-right flex-auto d-none d-lg-block" href="https://imgur.com/y6xQD2v"><img src="https://i.imgur.com/cORpz75.png" title="source: imgur.com" style="width: 370px; height: 370px;" /></a>
+              <img class="card-img-right flex-auto d-none d-lg-block" href="https://imgur.com/cORpz75"><img src="https://i.imgur.com/cORpz75.png" title="source: imgur.com" style="width: 370px; height: 370px;" /></a>
           </div>
         </div>
       </div>
@@ -74,7 +75,7 @@
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 shadow-sm h-md-370">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-black">Literature</strong>
+              <strong class="d-inline-block mb-2 text-black">Writing</strong>
               <h3 class="mb-0">
                 <a class="text-dark" href="#">Post title</a>
               </h3>
