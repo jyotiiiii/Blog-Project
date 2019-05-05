@@ -50,7 +50,7 @@ session_start();
           <a class="p-2 text-muted" href="?controller=product&action=create">Add Product</a>
           <a class="p-2 text-muted" href="?controller=article&action=readAll">Articles</a>
           <a class="p-2 text-muted" href="?controller=article&action=create">Add Article</a>
-          <a class="p-2 text-muted" href="#">Contact Us</a>
+          <a class="p-2 text-muted" href="?controller=pages&action=contact">Contact Us</a>
           <a class="p-2 text-muted" href="?controller=pages&action=about">About Us</a>
           <a class="p-2 text-muted" href="#myModal" data-toggle="modal" data-target="#myModal">Newsletter</a>
             <div id="myModal" class="modal fade">

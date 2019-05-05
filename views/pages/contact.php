@@ -1,25 +1,27 @@
-<!--!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+
+
+<html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>contact us</title>
-        <!-- Latest compiled and minified CSS
+        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-        <!-- Optional theme
+        <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <link rel="stylesheet" href="form.css" >
-        <script src="form.js"></script>
-    </head>-->
+        <link href="../../contactform/form.css" rel="stylesheet" type="text/css"/>
+        <script src="../../contactform/form.js" type="text/javascript"></script>
+    </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3" id="form_container">
                     <h2>Contact Us</h2> 
                     <p> Please send your message below. We will get back to you at the earliest! </p>
-                    <form role="form" method="post" id="reused_form">
+                    <form role="form" method="post" id="contact_form" action="https://formspree.io/honeycombbees1@gmail.com" autocomplete ="off">
                         <div class="row">
                             <div class="col-sm-12 form-group">
                                 <label for="message"> Message:</label>
@@ -38,7 +40,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12 form-group">
-                                <button type="submit" class="btn btn-lg btn-default pull-right" >Send &rarr;</button>
+                                <button type="submit" class="btn btn-lg btn-default pull-right" href="pages/home.php">Send &rarr;</button>
                             </div>
                         </div>
                     </form>

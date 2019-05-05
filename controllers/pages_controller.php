@@ -37,5 +37,9 @@ class PagesController {
       public function responsibility() {
       require_once('views/pages/responsibility.php');
     }
+    
+     public function contact() {
+      require_once('views/pages/contact.php');
+    }
 }
 

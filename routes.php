@@ -24,7 +24,7 @@
   }
 
      
-$controllers = array('pages' => ['home', 'error', 'about', 'responsibility'],
+$controllers = array('pages' => ['home', 'error', 'about','contact', 'responsibility'],
                     'article' => ['description', 'blogname', 'headline', 'readAll','read','create','update','delete'],
                     'product' => ['readAll','read','create','update','delete'],
                     'blogger' => ['login','logout','register'],
