@@ -15,4 +15,3 @@ echo "<img src='views/images/standard/_noproductimage.png' width='150' />";
 }
 
 ?>
-	

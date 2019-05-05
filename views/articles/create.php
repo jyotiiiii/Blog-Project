@@ -1,16 +1,4 @@
-<!--<head>
-  <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
-  <script>tinymce.init({
-      selector:'textarea',
-      plugins: 'link autoresize',  
-      menubar:false 
-  });</script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
-</head>-->
+
 <body>
     
 <div class="wrapper">
@@ -54,8 +42,6 @@
 	   name="MAX_FILE_SIZE" 
          value="10000000"
          />
-
-  <!--Need to point to pinterest url or file location-->
   <input type="file" name="myUploader" class="w3-btn w3-pink"/>
   <p>
     <input class="w3-btn w3-pink" type="submit" value="Add Article">

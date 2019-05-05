@@ -9,7 +9,7 @@
                
 <!--Inline javascript mouseover-->  
 <a href="#" id="fashion">
-    <img title="Najwa" src="https://i.imgur.com/5LVRHtR.png" onmouseover="this.src='https://i.imgur.com/QN3DDtC.png'" onmouseout="this.src='https://i.imgur.com/5LVRHtR.png'" height="173px" width="150px"/>
+    <img title="Najwa" href="" src="https://i.imgur.com/5LVRHtR.png" onmouseover="this.src='https://i.imgur.com/QN3DDtC.png'" onmouseout="this.src='https://i.imgur.com/5LVRHtR.png'" height="173px" width="150px"/>
 </a>
    
 <a href="#" id="lifestyle">

@@ -8,17 +8,16 @@ session_start();
 
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- needed-->
-<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- needed-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!--<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
+<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>-->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link href="views/css/modal.css" rel="stylesheet" type="text/css"/>
 <a href="../favicon.ico"></a>
-  
 <title>Honeycomb</title>
   </head>
   
@@ -28,7 +27,7 @@ session_start();
       <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center text-center">
           <div class="col-4 pt-1">
-           <!-- <a class="text-muted" href="#">Subscribe</a>-->
+           <a href="?controller=pages&action=responsibility"><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>
           </div>
           <div class="col-4 text-center">
               <a class="blog-header-logo display-3 text-dark" href="index.php" style="text-decoration: none">Honeycomb</a>
@@ -45,7 +44,7 @@ session_start();
 <div class="container">
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-          <a href="?controller=pages&action=responsibility"><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>
+          <!--<a href="?controller=pages&action=responsibility"><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>-->
           <a class="p-2 text-muted" href="?controller=pages&action=home">Home</a>
           <a class="p-2 text-muted" href="?controller=product&action=readAll">Products</a>
           <a class="p-2 text-muted" href="?controller=product&action=create">Add Product</a>
@@ -80,10 +79,7 @@ session_start();
 		</div>
 	</div>
 </div>
-        
-          <!-- the two line below can now be deleted as we now have the login in the H of honeycomb-->
-          <!-- <a class="p-2 text-muted" href="?controller=blogger&action=register">Register</a>
-          <a class="p-2 text-muted" href="?controller=blogger&action=login">Login</a>-->
+       
         </nav>
       </div>
 </div>
