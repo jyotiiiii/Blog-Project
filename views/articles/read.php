@@ -1,19 +1,19 @@
-<head>
-  
-</head>
-<!--<p>Article ID: <?php // echo $article->id; ?></p>-->
-<p> <?php // echo $article->headline; ?></p>
-
+<style>
+.center { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
 <?php
-
 $file ='views/images/' . $article->headline . '.jpeg';
 if(file_exists($file)){
-    $img = "<img src='$file' width='150' />";
+    $img ="<img src='$file' class='center' width='500' />";
     echo $img;
 }
 else
 {
-echo "<img src='views/images/standard/_noproductimage.png' width='150' />";
+echo "<img src='views/images/standard/_noproductimage.png' width='50' />";
 }
 
 ?>

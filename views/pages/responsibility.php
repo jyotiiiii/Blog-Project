@@ -1,8 +1,8 @@
 <div class="jumbotron p-3 p-md-5 text-dark rounded bg-light text-center">
         <div class="col-md-12 px-0">
-         <h1 class="display-4 font-italic">Buzz off Trolls</h1>
+         <h1 class="display-4">Buzz off Trolls</h1>
          <h4 class="lead my-4">Honeycomb is a collaborative space for a diverse group of women to share their interests and empower one another</h4>
-         <p class="font-italic">Only bees who are on their best bee-haviour please!</p>
+         <p class="font">Only bees who are on their best bee-haviour please!</p>
         </div> 
 <div class="row mb-2">
         <div class="col-md-6">
@@ -51,8 +51,8 @@
     <div class="jumbotron p-3 p-md-5 text-dark rounded bg-light text-center">
         <div class="col-md-12 px-0">
              <p class="lead my-3">What is a happy bumblebee's bloodtype?</p>
-           <h3 class="lead my-3" font-italic">Bee Positive</h3>
-         <h1 class="display-4 font-italic">Say, these bee puns aren't too shab-bee</h1>   
+           <h3 class="lead my-3" font">Bee Positive</h3>
+         <h1 class="display-4 font">Say, these bee puns aren't too shab-bee</h1>   
         </div> 
        
      

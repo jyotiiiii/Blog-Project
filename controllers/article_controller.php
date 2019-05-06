@@ -65,8 +65,14 @@ class ArticleController {
             $articles = Article::all();
             require_once('views/articles/readAll.php');
       }
-     
       
+    public function BlogPage(){
+
+            $articles = Article::BlogAll($_GET['blogger_id']);
+            require_once('views/articles/BlogPage.php');
+    }        
+    
+
 }
     
     

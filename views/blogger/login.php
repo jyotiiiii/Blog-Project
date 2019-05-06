@@ -1,5 +1,5 @@
 
-    <div class="wrapper">-->
+    <div class="wrapper">
         <h2 class="display-4">Login</h2>
         <p>Please fill in your credentials to login.</p>
         

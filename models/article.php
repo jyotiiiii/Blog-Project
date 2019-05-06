@@ -6,14 +6,16 @@
     public $id;
     public $blogger_id;
     public $headline;
+    public $tag;
     public $text;
-  public $description; 
+    public $description; 
 //    public $blogger_name; //concat first_name . last_name
 
       public function __construct($id, $blogger_id, $headline, $text, $description ) {
       $this->id = $id;
       $this->blogger_id = $blogger_id;
       $this->headline = $headline;
+       //$this->tag = $tag;
       $this->text = $text;
       $this->description = $description;
 //      $this->blogger_name = $blogger_name;
@@ -30,17 +32,33 @@ ON blogger.blogger_id = article.blogger_id');
       }
       return $list;
     }
-   
+    
+    public function BlogAll($blogger_id){ 
+       
+        $list =[];
+        $db = Db::getInstance();
+        $req = $db->query ("SELECT * FROM article WHERE blogger_id = $blogger_id ");
+        
+        $articles = $req->fetchAll();
+        
+	foreach ($articles as $article) {
+		$list[] = new Article($article['id'], $article['blogger_id'], $article['headline'], $article['text'], $article['description']);
+                
+                }
+      return $list;
+	
+    }
+    
       public static function blogname($id) {
       $db = Db::getInstance();
       //use intval to make sure $id is an integer
       $id = intval($id);
       $req = $db->prepare('SELECT first_name FROM blogger INNER JOIN article
-ON article.blogger_id = blogger.blogger_id WHERE article.id = :id');
+            ON article.blogger_id = blogger.blogger_id WHERE article.id = :id');
       //the query was prepared, now replace :id with the actual $id value
       $req->execute(array('id' => $id));
       $article = $req->fetch();
-if($article){
+            if($article){
       return $article['first_name'];
     }
     else
@@ -111,6 +129,7 @@ public static function update($id) {
 //            . "comment_id=:comment_id, "
     $req->bindParam(':id', $id);
     $req->bindParam(':headline', $headline);
+     // $req->bindParam(':tag', $tag);
     $req->bindParam(':text', $text);
     $req->bindParam(':description', $description);
 
@@ -146,6 +165,7 @@ $req->execute();
     $req->bindParam(':blogger_id', $blogger_id);
    //$req->bindParam(':comment_id', $comment_id);
     $req->bindParam(':headline', $headline);
+      //$req->bindParam(':tag', $tag);
     $req->bindParam(':text', $text);
     $req->bindParam(':description', $description);
 
@@ -155,7 +175,10 @@ $req->execute();
     }
     if(isset($_POST['headline'])&& $_POST['headline']!=""){
         $filteredHeadline = filter_input(INPUT_POST,'headline', FILTER_SANITIZE_SPECIAL_CHARS);
-    }
+            }
+    //if(isset($_POST['tag'])&& $_POST['tag']!=""){
+        //$filteredtag = filter_input(INPUT_POST,'tag', FILTER_SANITIZE_SPECIAL_CHARS);
+    
     if(isset($_POST['text'])&& $_POST['text']!=""){
         $filteredText = filter_input(INPUT_POST,'text', FILTER_SANITIZE_SPECIAL_CHARS);
     }
@@ -165,6 +188,7 @@ $req->execute();
 //$id = $filteredArticleID;
 $blogger_id = $filteredBlogger_ID;
 $headline = $filteredHeadline;
+//$tag = $filteredtag;
 $text = $filteredText;
 $description = $filteredDescription;
 //$req->execute();
@@ -202,7 +226,7 @@ public static function upload($headline) {
           }
             if($ext) {
             $tmpImage = addslashes(file_get_contents($_FILES['myUploader']['tmp_name'])); 
-            $path="/Applications/XAMPP/xamppfiles/htdocs/Blog-Project/views/images/";
+            $path="/Applications/XAMPP/xamppfiles/htdocs/Blog-Project/Blog-Project/Blog-Project/views/images/";
             $name= $headline . ".jpeg";
             //$imageName = $path . $headline . ".jpeg";
             move_uploaded_file($_FILES['myUploader']['tmp_name'],$path . $name);
@@ -226,5 +250,3 @@ public static function upload($headline) {
   
   
     }
-
-?>

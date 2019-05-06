@@ -14,11 +14,48 @@ class Blogger{
       $this->password = $password;
     }
 
-        public function bloggerLogin() {
+    public function bloggerLogin() {
     
         $db = Db::getInstance();
         
-            if (isset($_POST["user"])) {
+        $username = $_POST["username"];
+        $password = md5($_POST["password"]);
+
+        if(isset($_POST['username'])&& $_POST['username']!=""){
+        $filteredUserName = filter_input(INPUT_POST,'username', FILTER_SANITIZE_SPECIAL_CHARS);
+        }
+        $username = $filteredUserName;
+                
+        $req = $db->prepare("SELECT * FROM blogger WHERE username = :username");// AND password = :password");
+        $req->bindParam(':username', $username);
+        //$req->bindParam(':password', $password);
+
+        $req->execute();
+        $user = $req->fetch(PDO::FETCH_ASSOC);
+        
+        if($user === false){
+            die("Incorrect details");
+        }
+        else{
+        
+            if($password === $user['password']){
+                $_SESSION["username"] = filter_input(INPUT_POST, 'username');
+            }
+            else {
+                die("Incorrect details");
+            }
+        //$validPassword = password_verify($password, $user['password']);
+        
+        }
+        //$row = $req->fetch(PDO::FETCH_BOTH)
+                       
+                    //echo "Username or password is wrong.";
+                    //require_once 'views/blogger/login.php';
+                    //exit(0);
+                
+    }
+                
+            /*if (isset($_POST["user"])) {
                 if (empty($_POST["username"]) || empty($_POST["password"])) {
                     $message = '<label>All fields are required</label>';
                 } else {
@@ -30,13 +67,16 @@ class Blogger{
                                 'password' => filter_input(INPUT_POST, "password")
                             )
                     );
+                    
+                    
+                    
                     $count = $statement->rowCount();
                     if ($count > 0) {
                         $_SESSION["username"] = filter_input(INPUT_POST, 'username');
                 }
             }
-        }
-     }                      
+        } */
+                          
    
         
     public static function newRegister() {

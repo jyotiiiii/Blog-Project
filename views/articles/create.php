@@ -18,18 +18,10 @@
         <input style ="width: 42em;" class="form-control" type="text" name="headline" required >
     </p>
         
-        <p>
+<!--        <p>
         <label for="tag">Tag</label>  
         <input data-role="tagsinput" style ="width: 42em;" class="form-control" type="text" name="tag" required>
-    </p>
-        <p>
-        <label for="tag">Tag</label>  
-        <input data-role="tagsinput" style ="width: 42em;" class="form-control" type="text" name="tag" required>
-        
-    </p>
-     <p>
-         <label for="tag">Tag</label>  
-        <input data-role="tagsinput" style ="width: 42em;" class="form-control" type="text" name="tag" required>
+    </p>-->
         <label for="description">Description</label>  
 
             <textarea style ="width: 42em;" class="form-control" type="text" name="description" ></textarea>

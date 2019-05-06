@@ -2,12 +2,12 @@
    <div class="container">
        <div class="nav-scroller py-1 mb-2">
 <nav class="nav d-flex justify-content-between">
-          <a href="?controller=pages&action=responsibility"><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>
+  
 <!--          <a class="p-2 text-muted" href="?controller=product&action=readAll">Products</a>
           <a class="p-2 text-muted" href="?controller=product&action=create">Add Product</a>
           <a class="p-2 text-muted" href="?controller=article&action=readAll">Articles</a>
           <a class="p-2 text-muted" href="?controller=article&action=create">Add Article</a>-->
-          <a class="p-2 text-muted" href="#">Contact Us</a>
+          <a class="p-2 text-muted" href="?controller=pages&action=contact">Contact Us</a>
           <a class="p-2 text-muted" href="?controller=pages&action=about">About Us</a>
           <a class="p-2 text-muted" href="#myModal" data-toggle="modal" data-target="#myModal">Newsletter</a>
             <div id="myModal" class="modal fade">
@@ -17,7 +17,7 @@
                             <div class="modal-header">
                                 <div class="icon-box">						
                                     <!--<i class="fa fa-envelope-open-o"></i>-->
-                                    <a href="https://imgur.com/yAe0edI"><img src="https://i.imgur.com/yAe0edI.png" height="150px" width="150px" title="source: imgur.com" /></a> 
+                                    <a href="https://i.imgur.com/o1OFTqx.jpg"><img src="https://i.imgur.com/o1OFTqx.jpg" height="400px" width="400px" title="source: imgur.com" /></a> 
 				</div>
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
                             </div>
@@ -48,35 +48,35 @@
 
       <div class="jumbotron p-3 p-md-5 text-white rounded bg-white text-center">
         <div class="col-md-12 px-0">
-         <!-- <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-          <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
-          <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>-->
-           <div class="social-icons clearfix"> 
+        <div class="social-icons clearfix"> 
                
 <!--Inline javascript mouseover Najwa, Jyoti, Gabriella, Omolade, Mona, Niki-->  
-<a href="#" id="fashion">
+<a href="?controller=article&action=BlogPage&blogger_id=5" id="fashion">
     <img title="Najwa" href="" src="https://i.imgur.com/5LVRHtR.png" onmouseover="this.src='https://i.imgur.com/QN3DDtC.png'" onmouseout="this.src='https://i.imgur.com/5LVRHtR.png'" height="173px" width="150px"/>
 </a>
    
-<a href="#" id="making">
+<a href="?controller=article&action=BlogPage&blogger_id=6" id="making">
     <img title="Jyoti" src="https://i.imgur.com/fyu827Z.png" onmouseover="this.src='https://i.imgur.com/tmOGObw.png'" onmouseout="this.src='https://i.imgur.com/fyu827Z.png'" height="173px" width="150px"/>
 </a>
 
-<a href="#" id="writing">
+<a href="?controller=article&action=BlogPage&blogger_id=3" id="writing">
     <img title="Gabriella" src="https://i.imgur.com/vvySn6n.png" onmouseover="this.src='https://i.imgur.com/fkfMJmw.png'" onmouseout="this.src='https://i.imgur.com/vvySn6n.png'" height="173px" width="150px"/>
 </a>
 
-<a href="#" id="theatre">
+<a href="?controller=article&action=BlogPage&blogger_id=1" id="performance">
     <img title="Omolade" src="https://i.imgur.com/kYJ2Vbc.png" onmouseover="this.src='https://i.imgur.com/H00OCnK.png'" onmouseout="this.src='https://i.imgur.com/kYJ2Vbc.png'" height="173px" width="150px"/>
 </a>
 
-<a href="#" id="food">
+<a href="?controller=article&action=BlogPage&blogger_id=4" id="cooking">
 <img title="Mona" src="https://i.imgur.com/NHrgDmV.png" onMouseOver="this.src='https://i.imgur.com/BlPMxCj.png';" onMouseOut="this.src='https://i.imgur.com/NHrgDmV.png';" height="173px" width="150px"/>
 </a>
-
-<a href="#" id="lifestyle">
+<a href="?controller=article&action=BlogPage&blogger_id=2" id="lifestyle">
     <img title="Niki" src="https://i.imgur.com/DziTvph.png" onmouseover="this.src='https://i.imgur.com/eFAolQa.png'" onmouseout="this.src='https://i.imgur.com/DziTvph.png'" height="173px" width="150px"/>
-</a>      
+</a>
+
+<!--<a href="?controller=article&action=BlogLifestyle&blogger_id=2" id="lifestyle">
+    <img title="Niki" src="https://i.imgur.com/DziTvph.png" onmouseover="this.src='https://i.imgur.com/eFAolQa.png'" onmouseout="this.src='https://i.imgur.com/DziTvph.png'" height="173px" width="150px"/>
+</a>      -->
         </div>
         </div>
       </div>
@@ -192,3 +192,4 @@
       </div>
     </div>
 </div>
+

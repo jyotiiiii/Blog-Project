@@ -25,11 +25,11 @@
 
      
 $controllers = array('pages' => ['home', 'error', 'about','contact', 'responsibility'],
-                    'article' => ['description', 'blogname', 'headline', 'readAll','read','create','update','delete'],
-                    'product' => ['readAll','read','create','update','delete'],
-                    'blogger' => ['login','logout','register'],
-                    'subscriber' => ['signUp'],
-                    'controllerXXX' => ['actionYYY', 'actionZZZ'],
+                     'article' => ['BlogPage','description', 'blogname', 'headline', 'readAll','read','create','update','delete'],
+                     'product' => ['readAll','read','create','update','delete'],
+                     'blogger' => ['login','logout','register', 'comment'],
+                     'subscriber' => ['signUp'],
+                     'controllerXXX' => ['actionYYY', 'actionZZZ'],
                     );
 
   // check that the requested controller and action are both allowed

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
 <head>
-    <title>Error - 502</title>
+    <title>Error</title>
     <link rel="stylesheet" href="//assets.pinterest.com/css/error.css" type="text/css" media="all"></link>
     <style type="text/css">
         body {
