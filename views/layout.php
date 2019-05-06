@@ -11,9 +11,9 @@ session_start();
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- needed-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<!--<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
-<!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>-->
-<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link href="views/css/modal.css" rel="stylesheet" type="text/css"/>
@@ -40,11 +40,11 @@ session_start();
         </div>
       </header>
 
-      <!-- Navigation-->
+     <!-- Navigation
 <div class="container">
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between">
-          <!--<a href="?controller=pages&action=responsibility"><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>-->
+          <a href="?controller=pages&action=responsibility"><img src="https://i.imgur.com/yAe0edI.png" title="BEE" height="30px" width="35px" /></a>
           <a class="p-2 text-muted" href="?controller=pages&action=home">Home</a>
           <a class="p-2 text-muted" href="?controller=product&action=readAll">Products</a>
           <a class="p-2 text-muted" href="?controller=product&action=create">Add Product</a>
@@ -59,7 +59,7 @@ session_start();
 			<form action="index.php?controller=subscriber&action=signUp" method="post">
                             <div class="modal-header">
                                 <div class="icon-box">						
-                                    <!--<i class="fa fa-envelope-open-o"></i>-->
+                                   <i class="fa fa-envelope-open-o"></i>
                                     <a href="https://imgur.com/yAe0edI"><img src="https://i.imgur.com/yAe0edI.png" height="150px" width="150px" title="source: imgur.com" /></a> 
 				</div>
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
@@ -82,7 +82,7 @@ session_start();
        
         </nav>
       </div>
-</div>
+</div>-->
       
       
       
