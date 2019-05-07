@@ -1,11 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <a class="navbar-brand" href="#"></a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-      <div class="navbar-collapse collapse justify-content-between">
-     <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
 
       <li class="nav-item">
         <a class="nav-link" href="?controller=pages&action=contact">Contact Us</a>
@@ -49,7 +50,7 @@
 
 <!-- Blog Posts and Images-->
 <div class="container" text-align-center>
-       <div class="nav-scroller py-1 mb-2">
+
       <div class="jumbotron p-3 p-md-5 text-muted rounded bg-white text-center">
         <div class="col-md-12 px-0">
         <div class="social-icons clearfix"> 
@@ -90,8 +91,12 @@
         
       </div>
       </div>
+    
+    
+    
+    
 <div class="container" text-align-center>
-       <div class="nav-scroller py-1 mb-2">
+
       <div class="row mb-2">
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 shadow-sm h-md-370">
