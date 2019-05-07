@@ -9,7 +9,11 @@
           </div>
               </div>
 
-
-<h2 class="display-4">This is the home page of the Blog for logged in users</h2>
-
-<a href="index.php?controller=blogger&action=logout">Log out</a>
+<div class="container" class="text-center">
+    <div class="card-body d-flex flex-column align-items-start">
+         <h3 class="mb-0">
+                <a class="text-dark"> This is where you can Add, View, Edit and delete your articles.</a>
+              </h3>
+              <strong class="d-inline-block mb-2 text-black">You've reached the Bee Hive!</strong>
+              </div>
+</div>
