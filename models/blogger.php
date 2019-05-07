@@ -34,7 +34,7 @@ class Blogger{
         $user = $req->fetch(PDO::FETCH_ASSOC);
         
         if($user === false){
-            die("Incorrect details");
+            die("You have entered incorrect details. Please try again.");
         }
         else{
         
@@ -42,7 +42,8 @@ class Blogger{
                 $_SESSION["username"] = filter_input(INPUT_POST, 'username');
             }
             else {
-                die("Incorrect details");
+                
+                die("You have entered incorrect details. Please try again.");
             }
         //$validPassword = password_verify($password, $user['password']);
         
