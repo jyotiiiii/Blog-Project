@@ -1,15 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-   <div class="container">
-       <div class="nav-scroller py-1 mb-2">
-<nav class="nav d-flex justify-content-between">
-  
-<!--          <a class="p-2 text-muted" href="?controller=product&action=readAll">Products</a>
-          <a class="p-2 text-muted" href="?controller=product&action=create">Add Product</a>
-          <a class="p-2 text-muted" href="?controller=article&action=readAll">Articles</a>
-          <a class="p-2 text-muted" href="?controller=article&action=create">Add Article</a>-->
-          <a class="p-2 text-muted" href="?controller=pages&action=contact">Contact Us</a>
-          <a class="p-2 text-muted" href="?controller=pages&action=about">About Us</a>
-          <a class="p-2 text-muted" href="#myModal" data-toggle="modal" data-target="#myModal">Newsletter</a>
+      <div class="navbar-collapse collapse justify-content-between">
+     <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="?controller=pages&action=contact">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?controller=pages&action=about">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#myModal" data-toggle="modal" data-target="#myModal">Newsletter</a>
             <div id="myModal" class="modal fade">
                 <div class="modal-dialog modal-newsletter">
                     <div class="modal-content">
@@ -36,17 +41,16 @@
 			</form>			
 		</div>
 	</div>
+      </li>
+      </ul>
 </div>
-       </div>
-        
-          <!-- the two line below can now be deleted as we now have the login in the H of honeycomb-->
-          <!-- <a class="p-2 text-muted" href="?controller=blogger&action=register">Register</a>
-          <a class="p-2 text-muted" href="?controller=blogger&action=login">Login</a>-->
-        </nav>
+</nav>
+   
 
 <!-- Blog Posts and Images-->
-
-      <div class="jumbotron p-3 p-md-5 text-white rounded bg-white text-center">
+<div class="container" text-align-center>
+       <div class="nav-scroller py-1 mb-2">
+      <div class="jumbotron p-3 p-md-5 text-muted rounded bg-white text-center">
         <div class="col-md-12 px-0">
         <div class="social-icons clearfix"> 
                
@@ -78,9 +82,16 @@
     <img title="Niki" src="https://i.imgur.com/DziTvph.png" onmouseover="this.src='https://i.imgur.com/eFAolQa.png'" onmouseout="this.src='https://i.imgur.com/DziTvph.png'" height="173px" width="150px"/>
 </a>      -->
         </div>
-        </div>
+            
+    <h1 class="display-4 font-italic"class="text-muted">Summer 2019 Edition</h1>
+          <p class="lead my-3"class="text-muted">This feature edition of the Honeycomb celebrates everything summer. Bring it on!</p>
+          <p class="bd-lead"class="text-muted">See what we'll be up to as the weather gets warmer (fingers crossed). From Mona's Summer Snacks that are sure to delight, Najwa's rainbow-inspired High-Fashion trends, Omo's recommendations for all this summer's must-see performances around London and Niki's home staycation tricks to leave you refreshed. Gabriella will give you some reading tips perfect for a lazy summer day and Jyoti will give you some inspiration to create your own colourful block prints to celebrate the summer sun.</p>
+          <p class="lead mb-0"><a href="#" class="text-muted font-weight-bold">Scroll down for summer delights...</a></p>                             
+        
       </div>
-
+      </div>
+<div class="container" text-align-center>
+       <div class="nav-scroller py-1 mb-2">
       <div class="row mb-2">
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 shadow-sm h-md-370">
