@@ -43,7 +43,10 @@ class Blogger{
             }
             else {
                 
-                die("You have entered incorrect details. Please try again.");
+                //die("You have entered incorrect details. Please try again.");
+                echo "You have entered incorrect details. Please try again.";
+                require_once 'views/blogger/login.php';
+                exit();
             }
         //$validPassword = password_verify($password, $user['password']);
         
