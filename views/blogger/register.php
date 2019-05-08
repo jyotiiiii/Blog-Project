@@ -1,8 +1,8 @@
 
 <body>
     <div class="wrapper">
-        <h2 class="display-4">Register</h2>
-        <p>Please fill this form to create an account.</p>
+        <h2 class="display-4">Hello New-Bee</h2>
+        <p>Please fill this form to create an account and become a Bee.</p>
         <form class="registration" method="post" action="index.php?controller=blogger&action=register">
           
                 <div class="form-group">
@@ -32,7 +32,7 @@
                 
             
             
-            <p>Already have an account? <a href="index.php?controller=blogger&action=login">Login here</a>.</p>
+            <p>Already a bee? <a href="index.php?controller=blogger&action=login">Enter the Hive</a>.</p>
 
     </div>    
 </body>

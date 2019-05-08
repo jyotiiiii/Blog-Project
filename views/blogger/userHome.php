@@ -15,7 +15,7 @@
         <a class="nav-link" href="?controller=article&action=create">Add Article</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?controller=blogger&action=logout">Logout</a>
+        <a class="nav-link" href="?controller=blogger&action=logout">Leave the Hive</a>
       </li>
 
       </ul>

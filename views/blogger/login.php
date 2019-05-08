@@ -1,7 +1,7 @@
 
     <div class="wrapper">
-        <h2 class="display-4">Login</h2>
-        <p>Please fill in your credentials to login.</p>
+        <h2 class="display-4">Entrance to the Hive</h2>
+        <p>Please fill in your credentials to enter.</p>
         
         <form class="user" method="post" name="user" action="index.php?controller=blogger&action=login">
             
@@ -17,7 +17,7 @@
             </form>
          
         </div>
-            <p>Don't have an account? <a href="index.php?controller=blogger&action=register">Sign up now</a>.</p>
+            <p>Not a Bee? <a href="index.php?controller=blogger&action=register">Become one here</a>.</p>
         </form>
     </div>    
 </body>
